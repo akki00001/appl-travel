@@ -9,6 +9,8 @@ import DestinationListPage from "./destinations/DestinationListPage";
 import TestimonialSection from "../components/home/TestimonialSection";
 import RecentPost from "../components/blog/RecentPosts";
 import AboutSection from "../components/home/AboutSection";
+import FAQ from '../components/FAQ';
+
 
 const Home: React.FC = () => {
   return (
@@ -26,6 +28,7 @@ const Home: React.FC = () => {
       <AboutSection />
        <TestimonialSection />
        <RecentPost />
+       <FAQ />
 
     </>
   );
