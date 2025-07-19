@@ -26,7 +26,7 @@ const FAQ: React.FC = () => {
           <li key={idx} onClick={() => toggle(idx)} className={activeIndex === idx ? 'active' : ''}>
             <span>Q. {question}</span>
             <div className="answer">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p>We offer a wide range of travel packages including domestic tours, international getaways, honeymoon packages, group tours, customized holidays, adventure trips, and weekend getaways.</p>
             </div>
           </li>
         ))}
