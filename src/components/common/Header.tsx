@@ -6,18 +6,18 @@ import "swiper/css/navigation";
 import "../../assets/styles/components/_header.scss";
 
 const categories = [
-  { name: "Vietnam", icon: "/src/assets/icons/vietnam.svg" },
-  { name: "Goa", icon: "/src/assets/icons/goa.svg" },
-  { name: "Kerala", icon: "/src/assets/icons/kerala.svg" },
-  { name: "Himachal", icon: "/src/assets/icons/himachal.svg" },
-  { name: "Europe", icon: "/src/assets/icons/europe.svg" },
-  { name: "Bhutan", icon: "/src/assets/icons/bhutan.svg" },
-  { name: "J&K", icon: "/src/assets/icons/jammu-and-kashmir.svg" },
-   { name: "malaysia", icon: "/src/assets/icons/malaysia.svg" },
-  { name: "maldives", icon: "/src/assets/icons/maldives.svg" },
-  { name: "thailand", icon: "/src/assets/icons/thailand.svg" },
-  { name: "sri lanka", icon: "/src/assets/icons/srilanka.svg" },
-  { name: "Dubai", icon: "/src/assets/icons/dubai.svg" },
+  { name: "Vietnam", icon: "/icons/vietnam.svg" },
+  { name: "Goa", icon: "/icons/goa.svg" },
+  { name: "Kerala", icon: "/icons/kerala.svg" },
+  { name: "Himachal", icon: "/icons/himachal.svg" },
+  { name: "Europe", icon: "/icons/europe.svg" },
+  { name: "Bhutan", icon: "/icons/bhutan.svg" },
+  { name: "J&K", icon: "/icons/jammu-and-kashmir.svg" },
+  { name: "Malaysia", icon: "/icons/malaysia.svg" },
+  { name: "Maldives", icon: "/icons/maldives.svg" },
+  { name: "Thailand", icon: "/icons/thailand.svg" },
+  { name: "Sri Lanka", icon: "/icons/srilanka.svg" },
+  { name: "Dubai", icon: "/icons/dubai.svg" },
 ];
 
 const Header: React.FC = () => {
