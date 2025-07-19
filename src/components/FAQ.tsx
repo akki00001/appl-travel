@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import '../assets/styles/pages/_faq.scss';
 
 const faqs = [
-  "What's the best time to visit Bali?",
-  "What are the best places to visit in Bali?",
-  "Do Indian citizens require a Visa to visit Bali?",
-  "Which Airline flies to Bali from India?",
-  "What's the average flight duration between India to Bali?",
-  "What kind of activities does Bali offer to travellers?",
-  "How many days are enough to explore Bali?"
+  "What types of travel packages does Astir Passage offer?",
+  "Can I customize my travel itinerary with Astir Passage",
+  "Is flight booking included in your travel packages? ",
+  "How do I book a tour with Astir Passage? ",
+  "Do you provide visa assistance for international tours? ",
+  "Are your travel packages suitable for family trips? ",
+  "What happens if my trip gets canceled or rescheduled? "
 ];
 
 const FAQ: React.FC = () => {
