@@ -14,12 +14,12 @@ interface Destination {
 }
 
 const destinations: Destination[] = [
-  { name: 'Canada', image: '/images/destination-1.jpg', tours: 2, path: '#' },
+  { name: 'Canada', image: '/images/destination-1.jpg', tours: 2, path: '/destination/canada' },
   { name: 'Thailand', image: '/images/destination-2.jpg', tours: 5, path: '/destination/thailand' },
   { name: 'Dubai', image: '/images/dubai.jpg', tours: 4, path: '/destination/dubai' },
-  { name: 'Italy', image: '/images/destination-9.jpg', tours: 8, path: '#' },
+  { name: 'Italy', image: '/images/destination-9.jpg', tours: 8, path: '/destination/italy' },
   { name: 'Switzerland', image: '/images/destination-7.jpg', tours: 3, path: '/destination/switzerland' },
-  { name: 'Japan', image: '/images/destination-8.jpg', tours: 5, path: '#' },
+  { name: 'Japan', image: '/images/destination-8.jpg', tours: 5, path: '/destination/japan' },
   { name: 'Singapore', image: '/images/destination-2.jpg', tours: 4, path: '/destination/singapore' },
   { name: 'Australia', image: '/images/destination-7.jpg', tours: 5, path: '/destination/australia' },
   { name: 'Greece', image: '/images/destination-10.jpg', tours: 7, path: '#' },
