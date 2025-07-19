@@ -1,0 +1,81 @@
+.header-container {
+  background-color: #fff;
+
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background-color: #2a2323;
+
+    .logo {
+      height: 90px;
+    }
+
+    .search-input {
+      flex: 1;
+      max-width: 500px;
+      margin: 0 40px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: none;
+      outline: none;
+    }
+
+    .connect-btn {
+      background-color: #c42e2e;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 40px;
+      font-weight: 600;
+    }
+  }
+
+  .slider-wrapper {
+    padding: 20px 40px;
+    position: relative;
+
+    .icon-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      text-align: center;
+
+      img {
+        height: 50px;
+        object-fit: contain;
+      }
+
+      p {
+        font-weight: 500;
+      }
+    }
+
+    .custom-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      background: #f1f1f1;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .swiper-button-prev {
+      left: 10px;
+    }
+
+    .swiper-button-next {
+      right: 10px;
+    }
+  }
+
+}

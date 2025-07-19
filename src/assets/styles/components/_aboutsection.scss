@@ -1,0 +1,19 @@
+.about-section {
+  display: flex;
+  align-items: center;
+  margin: 4rem 0;
+
+  &__image {
+    flex: 1;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    padding: 2rem;
+  }
+}

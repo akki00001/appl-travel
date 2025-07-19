@@ -1,0 +1,97 @@
+.recentPosts {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fff;
+
+  .subtitle {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: #f75d34;
+    margin-bottom: 0.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 3rem;
+  }
+
+  .postGrid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 350px;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .imageWrapper {
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .dateBadge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f75d34;
+        color: #fff;
+        padding: 0.8rem;
+        text-align: left;
+        font-weight: 600;
+
+        .date {
+          display: block;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+
+        .monthYear {
+          font-size: 0.9rem;
+        }
+      }
+    }
+
+    .content {
+      padding: 1.2rem;
+
+      h3 {
+        font-size: 1.1rem;
+        color: #222;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .readMore {
+        background: #f75d34;
+        color: #fff;
+        border: none;
+        padding: 0.7rem 1.5rem;
+        font-weight: bold;
+        font-size: 0.95rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #d9451f;
+        }
+      }
+    }
+  }
+}

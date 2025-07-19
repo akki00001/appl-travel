@@ -1,0 +1,22 @@
+body {
+  overflow-x: hidden;
+}
+@import 'base/variables';
+@import 'base/mixins';
+
+@import 'components/destinationslider';
+@import 'components/footer.module';
+@import 'components/header';
+@import 'components/herohighlightsection';
+@import 'components/herosection';
+@import 'components/recentposts';
+@import 'components/testimonialsection';
+@import 'components/balitourcards';
+@import 'components/besttimetovisit';
+@import 'components/aboutsection';
+
+@import 'pages/destinationlistpage';
+@import 'pages/about';
+@import 'pages/blog';
+@import 'pages/australiapage';
+@import 'pages/faq';
