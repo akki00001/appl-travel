@@ -25,7 +25,9 @@ const Header: React.FC = () => {
     <div className="header-container">
       {/* Top Bar */}
       <div className="top-bar">
-        <img src="/images/logo.webp" alt="Logo" className="logo" />
+        <a href="/">
+          <img src="/images/logo.webp" alt="Logo" className="logo" />
+        </a>
         <input className="search-input" type="text" placeholder="Search ..." />
         <button className="connect-btn">Let's Connect</button>
       </div>

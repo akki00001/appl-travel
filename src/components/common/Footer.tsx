@@ -28,7 +28,7 @@ const Footer = () => {
         <div className={styles.columns}>
           {/* About */}
           <div className={styles.column}>
-            <h4>ABOUT THRILLOPHILIA</h4>
+            <h4>ABOUT ASTIR PASSAGE PVT LTD</h4>
             <ul>
               <li>About Us</li>
               <li>We Are Hiring</li>

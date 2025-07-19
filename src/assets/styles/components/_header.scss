@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px 24px;
+    padding: 3px 24px;
     background-color: #2a2323;
 
     .logo {
@@ -33,7 +33,7 @@
   }
 
   .slider-wrapper {
-    padding: 20px 40px;
+    padding: 7px 50px;
     position: relative;
 
     .icon-card {
@@ -78,4 +78,39 @@
     }
   }
 
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 12px 16px;
+
+      .logo {
+        height: 60px;
+        margin-bottom: 12px;
+      }
+
+      .search-input {
+        max-width: 100%;
+        margin: 0 0 12px 0;
+        width: 100%;
+      }
+
+      .connect-btn {
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 30px;
+        font-size: 14px;
+      }
+    }
+
+    .slider-wrapper {
+      padding: 10px 16px;
+    }
+  }
+}
+:root {
+    --swiper-navigation-size: 20px;
 }

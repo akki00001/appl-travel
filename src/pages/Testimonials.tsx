@@ -126,9 +126,9 @@ const Testimonials: React.FC = () => {
                   style={{ width: 100, height: 100 }}
                 />
                 <div className="testimonial-text bg-white p-4 mt-n5">
-                  <p className="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                  <h5 className="text-truncate">Client Name</h5>
-                  <span>Profession</span>
+                  <p className="mt-5">We recently booked a trip to Vietnam with Astir passage and it exceeded our expectations! The planning was meticulous, the drivers were professional and knowledgeable, and the itinerary was perfectly tailored to our interests. We felt like we were in safe hands throughout our journey. Highly recommend!"</p>
+                  <h5 className="text-truncate">Kanika Bhatia</h5>
+                  <span>Traveler</span>
                 </div>
               </div>
             ))}
