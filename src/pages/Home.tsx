@@ -44,7 +44,7 @@ const Home: React.FC = () => {
       <SEO
         title="Home - Astir Travel"
         description="Discover amazing travel destinations and experiences with Astir Travel. Your adventure starts here."
-        keywords="travel, home, Astir Travel, destinations, tours"
+        keywords="travel, home, Astir Travel, destinations, tours, best tours, top travel destinations, adventure tours, holiday packages, travel deals, guided tours, vacation packages, tour operators"
         url="https://www.astirtravel.com/"
         image="https://www.astirtravel.com/images/logo.webp"
       />
