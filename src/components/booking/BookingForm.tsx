@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { FaMapMarkerAlt, FaCalendarAlt, FaUser, FaSearch } from 'react-icons/fa';
 import { MdHotel, MdRestaurant, MdDirectionsCar, MdLocalActivity } from 'react-icons/md';
-
 const tabs = [
   { id: 'tour', label: 'Tour', icon: <FaMapMarkerAlt /> },
   { id: 'hotel', label: 'Hotel', icon: <MdHotel /> },
@@ -13,6 +12,58 @@ const tabs = [
 
 const BookingForm: React.FC = () => {
   const [activeTab, setActiveTab] = useState('tour');
+  const [destination, setDestination] = useState('');
+  const [checkin, setCheckin] = useState('');
+  const [checkout, setCheckout] = useState('');
+  const [guest, setGuest] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!destination || !checkin || !checkout || !guest) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    const formData = {
+      activeTab,
+      destination,
+      checkin,
+      checkout,
+      guest,
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/send-booking', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setIsSubmitting(false);
+        setShowThankYou(true);
+        // Reset form
+        setDestination('');
+        setCheckin('');
+        setCheckout('');
+        setGuest('');
+      } else {
+        setIsSubmitting(false);
+        alert('Failed to send email. Please try again later.');
+      }
+    } catch (error) {
+      setIsSubmitting(false);
+      alert('Failed to send email. Please try again later.');
+      console.error(error);
+    }
+  };
 
   return (
     <div className="bg-white rounded shadow p-4" style={{ paddingTop: '20px' }}>
@@ -33,7 +84,7 @@ const BookingForm: React.FC = () => {
       </ul>
 
       {/* Form Fields */}
-      <form className="row g-3 align-items-end">
+      <form className="row g-3 align-items-end" onSubmit={handleSubmit}>
         {/* Destination */}
         <div className="col">
           <label htmlFor="destination" className="form-label fw-semibold">Destinations:</label>
@@ -44,6 +95,8 @@ const BookingForm: React.FC = () => {
               id="destination"
               className="form-control border-start-0"
               placeholder="Where are you going . . ."
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
             />
           </div>
         </div>
@@ -56,6 +109,8 @@ const BookingForm: React.FC = () => {
               type="date"
               id="checkin"
               className="form-control"
+              value={checkin}
+              onChange={(e) => setCheckin(e.target.value)}
             />
             <span className="input-group-text bg-white border-start-0"><FaCalendarAlt /></span>
           </div>
@@ -69,11 +124,13 @@ const BookingForm: React.FC = () => {
               type="date"
               id="checkout"
               className="form-control"
+              value={checkout}
+              onChange={(e) => setCheckout(e.target.value)}
             />
             <span className="input-group-text bg-white border-start-0"><FaCalendarAlt /></span>
           </div>
         </div>
-  
+
         {/* Guest */}
         <div className="col">
           <label htmlFor="guest" className="form-label fw-semibold">Guest:</label>
@@ -83,6 +140,8 @@ const BookingForm: React.FC = () => {
               id="guest"
               className="form-control"
               placeholder="+ Add Guests"
+              value={guest}
+              onChange={(e) => setGuest(e.target.value)}
             />
             <span className="input-group-text bg-white border-start-0"><FaUser /></span>
           </div>
@@ -90,11 +149,27 @@ const BookingForm: React.FC = () => {
 
         {/* Search Button */}
         <div className="col-auto">
-          <button type="submit" className="btn btn-danger px-4 py-2 d-flex align-items-center gap-2">
-            Search <FaSearch />
+          <button type="submit" className="btn btn-danger px-4 py-2 d-flex align-items-center gap-2" disabled={isSubmitting}>
+            {isSubmitting ? 'Sending...' : 'Search'} <FaSearch />
           </button>
         </div>
       </form>
+
+      {/* Thank You Popup */}
+      {showThankYou && (
+        <div className="thank-you-popup fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded shadow-lg text-center">
+            <h2 className="text-2xl font-semibold mb-4">Thank You!</h2>
+            <p>Your submission has been received.</p>
+            <button
+              className="mt-4 btn btn-primary"
+              onClick={() => setShowThankYou(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
