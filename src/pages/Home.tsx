@@ -11,6 +11,32 @@ import RecentPost from "../components/blog/RecentPosts";
 import AboutSection from "../components/home/AboutSection";
 import FAQ from '../components/FAQ';
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  "name": "Astir Travel",
+  "url": "https://www.astirtravel.com/",
+  "logo": "https://www.astirtravel.com/images/logo.webp",
+  "sameAs": [
+    "https://www.facebook.com/astirtravel",
+    "https://twitter.com/astirtravel",
+    "https://www.instagram.com/astirtravel"
+  ],
+  "description": "Discover amazing travel destinations and experiences with Astir Travel. Your adventure starts here.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Travel St",
+    "addressLocality": "City",
+    "addressRegion": "State",
+    "postalCode": "12345",
+    "addressCountry": "Country"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-800-555-5555",
+    "contactType": "Customer Service"
+  }
+};
 
 const Home: React.FC = () => {
   return (
@@ -19,7 +45,10 @@ const Home: React.FC = () => {
         title="Home - Astir Travel"
         description="Discover amazing travel destinations and experiences with Astir Travel. Your adventure starts here."
         keywords="travel, home, Astir Travel, destinations, tours"
+        url="https://www.astirtravel.com/"
+        image="https://www.astirtravel.com/images/logo.webp"
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <HeroSection />
       {/* <BookingForm /> */}
       <DestinationSlider />

@@ -37,23 +37,24 @@ const HeroSection: React.FC = () => {
         <p className="lead fw-light mb-5 mx-auto" style={{ maxWidth: '600px' }}>
           Travel to the any corner of the world, without going around in circles
         </p>
-        <a
-          href="https://youtu.be/N66NyPPzvts"
-          className="btn btn-light rounded-circle shadow-lg d-inline-flex align-items-center justify-content-center mx-auto"
-          style={{ width: '96px', height: '96px', color: '#f05a28', position: 'relative', overflow: 'hidden' }}
-        >
-          <span
-            className="position-absolute rounded-circle"
-            style={{
-              inset: 0,
-              backgroundColor: '#f05a28',
-              opacity: 0.2,
-              animation: 'ping 2s infinite',
-              zIndex: 0,
-            }}
-          ></span>
-          <FaPlay className="position-relative" style={{ fontSize: '1.5rem', zIndex: 1 }} />
-        </a>
+<a
+  href="https://youtu.be/N66NyPPzvts"
+  aria-label="Watch Astir Passage promotional video"
+  className="btn btn-light rounded-circle shadow-lg d-inline-flex align-items-center justify-content-center mx-auto"
+  style={{ width: '96px', height: '96px', color: '#f05a28', position: 'relative', overflow: 'hidden' }}
+>
+  <span
+    className="position-absolute rounded-circle"
+    style={{
+      inset: 0,
+      backgroundColor: '#f05a28',
+      opacity: 0.2,
+      animation: 'ping 2s infinite',
+      zIndex: 0,
+    }}
+  ></span>
+  <FaPlay className="position-relative" style={{ fontSize: '1.5rem', zIndex: 1 }} />
+</a>
       </div>
 
       {/* Booking Form Positioned */}

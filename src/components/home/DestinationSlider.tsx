@@ -47,18 +47,18 @@ const DestinationSlider: React.FC = () => {
           1024: { slidesPerView: 4 },
         }}
       >
-        {destinations.map((dest, idx) => (
-          <SwiperSlide key={idx}>
-            <Link
-              to={dest.path}
-              className="destination-card"
-            >
-              <img src={dest.image} alt={dest.name} />
-              <div className="top-label">{dest.name}</div>
-              <div className="bottom-badge">{dest.tours} Tours</div>
-            </Link>
-          </SwiperSlide>
-        ))}
+{destinations.map((dest, idx) => (
+  <SwiperSlide key={idx}>
+    <Link
+      to={dest.path}
+      className="destination-card"
+    >
+      <img src={dest.image} alt={dest.name} loading="lazy" />
+      <div className="top-label">{dest.name}</div>
+      <div className="bottom-badge">{dest.tours} Tours</div>
+    </Link>
+  </SwiperSlide>
+))}
       </Swiper>
     </section>
   );
