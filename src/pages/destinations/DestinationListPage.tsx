@@ -240,47 +240,49 @@ const DestinationListPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="content">
-              <div className="top-row">
-                <span>{item.duration}</span>
-                <span className="rating">
-                  <i className="fa fa-star" /> {item.rating}
-                  <span className="count">({item.reviews})</span>
-                </span>
+              <div className="content">
+                <div className="content-main">
+                  <div className="top-row">
+                    <span>{item.duration}</span>
+                    <span className="rating">
+                      <i className="fa fa-star" /> {item.rating}
+                      <span className="count">({item.reviews})</span>
+                    </span>
+                  </div>
+
+                  <Link to={item.path}>
+                    <h3>{item.title}</h3>
+                  </Link>
+
+                  <div className="locations">
+                    {item.locations.map((loc, i) => (
+                      <span key={i}>
+                        <b>{loc.label}</b> {loc.name}
+                        {i < item.locations.length - 1 && (
+                          <span className="sep">•</span>
+                        )}
+                      </span>
+                    ))}
+                    <span className="overflow">{item.overflow}</span>
+                  </div>
+
+                  <div className="monsoon-badge">MONSOON SALE!</div>
+
+                  <div className="pricing">
+                    <span className="strike">{item.originalPrice}</span>
+                    <span className="discount">{item.discount}</span>
+                  </div>
+
+                  <div className="final-price">
+                    {item.finalPrice} <span>{item.unit}</span>
+                  </div>
+                </div>
+
+                <button className="callback-btn">
+                  <i className="fa fa-phone" />
+                  Request Callback
+                </button>
               </div>
-
-              <Link to={item.path}>
-                <h3>{item.title}</h3>
-              </Link>
-
-              <div className="locations">
-                {item.locations.map((loc, i) => (
-                  <span key={i}>
-                    <b>{loc.label}</b> {loc.name}
-                    {i < item.locations.length - 1 && (
-                      <span className="sep">•</span>
-                    )}
-                  </span>
-                ))}
-                <span className="overflow">{item.overflow}</span>
-              </div>
-
-              <div className="monsoon-badge">MONSOON SALE!</div>
-
-              <div className="pricing">
-                <span className="strike">{item.originalPrice}</span>
-                <span className="discount">{item.discount}</span>
-              </div>
-
-              <div className="final-price">
-                {item.finalPrice} <span>{item.unit}</span>
-              </div>
-
-              <button className="callback-btn">
-                <i className="fa fa-phone" />
-                Request Callback
-              </button>
-            </div>
           </div>
         ))}
       </div>
