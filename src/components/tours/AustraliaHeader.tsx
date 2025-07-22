@@ -6,22 +6,22 @@ const AustraliaHeader: React.FC = () => {
     <div className="australia-header">
       <div className="header-grid">
         <div className="main-img">
-          <img src="/images/Australia/hero.jpg" alt="Main" />
+          <img src="/images/Australia/01.jpg" alt="Main" />
         </div>
         <div className="side-img">
-          <img src="/images/Australia/dest.jpg" alt="Destinations" />
+          <img src="/images/Australia/02.jpg" alt="Destinations" />
           <span className="caption">Destinations</span>
         </div>
         <div className="side-img">
-          <img src="/images/Australia/stays.jpg" alt="Stays" />
+          <img src="/images/Australia/03.jpg" alt="Stays" />
           <span className="caption">Stays</span>
         </div>
         <div className="side-img">
-          <img src="/images/Australia/sight.jpg" alt="Sightseeing" />
+          <img src="/images/Australia/04.jpg" alt="Sightseeing" />
           <span className="caption">Activity & Sightseeing</span>
         </div>
         <div className="side-img view-all">
-          <img src="/images/Australia/gallery.jpg" alt="Gallery" />
+          <img src="/images/Australia/05.jpg" alt="Gallery" />
           <button className="view-btn">📷 View All Images</button>
         </div>
       </div>
