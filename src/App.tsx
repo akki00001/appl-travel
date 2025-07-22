@@ -13,7 +13,7 @@ const App = () => {
         <title>Astir Passage</title>
       </Helmet>
 
-      <Header setSearchTerm={setSearchTerm} />
+      <Header searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <main>
         <AppRoutes searchTerm={searchTerm} />
       </main>

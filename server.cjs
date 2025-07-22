@@ -1,0 +1,50 @@
+const express = require('express');
+const nodemailer = require('nodemailer');
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
+const app = express();
+const port = 5000;
+
+app.use(cors());
+app.use(bodyParser.json());
+
+require('dotenv').config();
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.GMAIL_USER, // Gmail address from .env
+    pass: process.env.GMAIL_PASS, // Gmail app password from .env
+  },
+});
+
+app.post('/send-booking', (req, res) => {
+  const { activeTab, destination, checkin, checkout, guest } = req.body;
+
+  const mailOptions = {
+    from: 'yourgmail@gmail.com', // Replace with your Gmail address
+    to: 'com.akash@yahoo.com',   // User's email address
+    subject: 'New Booking Form Submission',
+    text: `
+      Booking Type: ${activeTab}
+      Destination: ${destination}
+      Check In: ${checkin}
+      Check Out: ${checkout}
+      Guests: ${guest}
+    `,
+  };
+
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      console.error('Error sending email:', error);
+      res.status(500).send('Error sending email');
+    } else {
+      console.log('Email sent:', info.response);
+      res.status(200).send('Email sent successfully');
+    }
+  });
+});
+
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
