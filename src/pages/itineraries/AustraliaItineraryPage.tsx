@@ -81,7 +81,8 @@ const AustraliaItineraryPage: React.FC = () => {
         description={`Discover the detailed itinerary for the ${itineraryDetails.title}.`}
         keywords="Australia, Sydney, Melbourne, Gold Coast, Blue Mountains, Great Ocean Road, Astir Travel"
       />
-      <ItineraryLayout itinerary={itineraryDetails} children={undefined}>
+      <ItineraryLayout itinerary={itineraryDetails}>
+        <AustraliaHeader />
       </ItineraryLayout>
     </>
   );

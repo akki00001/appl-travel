@@ -1,0 +1,111 @@
+.australia-header {
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.main-img img,
+.side-img img {
+  width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.side-img {
+  position: relative;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.view-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-btn {
+  margin-top: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.header-details {
+  margin-top: 1rem;
+}
+
+.trip-info {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.badge {
+  background-color: #007bff;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  font-weight: bold;
+}
+
+.includes p {
+  margin: 0.2rem 0;
+}
+
+.price-box {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price h2 {
+  margin: 0;
+  color: #007bff;
+}
+
+.old {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.tag {
+  background-color: gold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+}
+
+.rating {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+}
+
+.enquiry-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}

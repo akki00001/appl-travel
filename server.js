@@ -9,11 +9,12 @@ const port = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
+require('dotenv').config();
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'yourgmail@gmail.com', // Replace with your Gmail address
-    pass: 'yourgmailpassword',   // Replace with your Gmail app password or actual password
+    user: process.env.GMAIL_USER, // Gmail address from .env
+    pass: process.env.GMAIL_PASS, // Gmail app password from .env
   },
 });
 

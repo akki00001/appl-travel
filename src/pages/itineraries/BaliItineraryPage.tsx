@@ -1,6 +1,6 @@
 import React from 'react';
 import ItineraryLayout from '../../components/ItineraryLayout';
-// import BaliTourCards from '../../components/tours/BaliTourCards';
+import BaliTourCards from '../../components/tours/BaliTourCards';
 import SEO from '../../components/common/SEO';
 
 const BaliItineraryPage: React.FC = () => {
@@ -63,8 +63,8 @@ const BaliItineraryPage: React.FC = () => {
         description={`Discover the detailed itinerary for the ${itineraryDetails.title}.`}
         keywords="Bali, Ubud, Seminyak, Kuta, private pool villa, Astir Travel"
       />
-      <ItineraryLayout itinerary={itineraryDetails} children={undefined}>
-        {/* <BaliTourCards /> */}
+      <ItineraryLayout itinerary={itineraryDetails}>
+        <BaliTourCards />
       </ItineraryLayout>
     </>
   );
