@@ -20,7 +20,15 @@ const categories = [
   { name: "Dubai", icon: "/icons/dubai.svg" },
 ];
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Header: React.FC<HeaderProps> = ({ setSearchTerm }) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <div className="header-container">
       {/* Top Bar */}
@@ -28,7 +36,12 @@ const Header: React.FC = () => {
         <a href="/">
           <img src="/images/logo.webp" alt="Logo" className="logo" />
         </a>
-        <input className="search-input" type="text" placeholder="Search ..." />
+        <input
+          className="search-input"
+          type="text"
+          placeholder="Search ..."
+          onChange={handleInputChange}
+        />
         <button className="connect-btn">Let's Connect</button>
       </div>
 

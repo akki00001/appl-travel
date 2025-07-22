@@ -29,7 +29,15 @@ const destinations: Destination[] = [
   { name: 'Bali Bliss Itinerary', image: '/images/bali/03.jpg', tours: 1, path: '/destination/bali/bali-bliss' },
 ];
 
-const DestinationSlider: React.FC = () => {
+interface DestinationSliderProps {
+  searchTerm: string;
+}
+
+const DestinationSlider: React.FC<DestinationSliderProps> = ({ searchTerm }) => {
+  const filteredDestinations = destinations.filter(dest =>
+    dest.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <section className="destination-slider-section">
       <div className="heading text-center">
@@ -47,18 +55,18 @@ const DestinationSlider: React.FC = () => {
           1024: { slidesPerView: 4 },
         }}
       >
-{destinations.map((dest, idx) => (
-  <SwiperSlide key={idx}>
-    <Link
-      to={dest.path}
-      className="destination-card"
-    >
-      <img src={dest.image} alt={dest.name} loading="lazy" />
-      <div className="top-label">{dest.name}</div>
-      <div className="bottom-badge">{dest.tours} Tours</div>
-    </Link>
-  </SwiperSlide>
-))}
+        {filteredDestinations.map((dest, idx) => (
+          <SwiperSlide key={idx}>
+            <Link
+              to={dest.path}
+              className="destination-card"
+            >
+              <img src={dest.image} alt={dest.name} loading="lazy" />
+              <div className="top-label">{dest.name}</div>
+              <div className="bottom-badge">{dest.tours} Tours</div>
+            </Link>
+          </SwiperSlide>
+        ))}
       </Swiper>
     </section>
   );

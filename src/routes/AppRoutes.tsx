@@ -27,10 +27,14 @@ import ItalyPage from '../pages/destinations/Italy';
 import SwitzerlandPage from '../pages/destinations/Switzerland';
 import JapanPage from '../pages/destinations/Japan';
 
-const AppRoutes = () => {
+interface AppRoutesProps {
+  searchTerm: string;
+}
+
+const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home searchTerm={searchTerm} />} />
       <Route path="/packages" element={<Packages />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />

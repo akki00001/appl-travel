@@ -38,7 +38,11 @@ const structuredData = {
   }
 };
 
-const Home: React.FC = () => {
+interface HomeProps {
+  searchTerm: string;
+}
+
+const Home: React.FC<HomeProps> = ({ searchTerm }) => {
   return (
     <>
       <SEO
@@ -51,7 +55,7 @@ const Home: React.FC = () => {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       <HeroSection />
       {/* <BookingForm /> */}
-      <DestinationSlider />
+      <DestinationSlider searchTerm={searchTerm} />
       <DestinationListPage />
       {/* <HeroHighlightSection /> */}
       <AboutSection />
