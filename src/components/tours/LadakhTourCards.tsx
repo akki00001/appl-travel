@@ -20,6 +20,7 @@ const LadakhTourCards: React.FC = () => {
 
       <div style={{ padding: '1rem' }}>
         <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Leh Ladakh Expedition</h1>
+        <hr />
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', margin: '1rem 0' }}>
           <span style={{ background: '#ffc107', color: '#333', padding: '0.25rem 0.75rem', borderRadius: '0.5rem', fontWeight: 'bold' }}>6D/5N</span>
           <span>2 Days in Leh</span>
