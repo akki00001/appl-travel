@@ -14,9 +14,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Eastern Canada Explorer',
     images: [
-      '/images/destination-1.jpg',
-      '/images/destination-2.jpg',
-      '/images/destination-3.jpg',
+      '../images/canada/01.jpg',
+      '../images/canada/02.jpg',
+      '../images/canada/03.jpg',
     ],
     daysRange: '6-13 days',
     priceRange: '$1,900 and above',
@@ -36,9 +36,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Rockies & French Canada',
     images: [
-      '/images/pexels-andre-furtado-43594-2916826.jpg',
-      '/images/pexels-jaime-reimer-1376930-2662116.jpg',
-      '/images/pexels-vincent-albos-322257-1750754.jpg',
+      '../images/canada/04.jpg',
+      '../images/canada/05.jpg',
+      '../images/canada/03.jpg',
     ],
     daysRange: '6-13 days',
     priceRange: '$1,900 and above',
@@ -58,9 +58,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Quebec Culture Trail',
     images: [
-      '/images/pexels-jaime-reimer-1376930-2662116.jpg',
-      '/images/pexels-vincent-albos-322257-1750754.jpg',
-      '/images/pexels-andre-furtado-43594-2916826.jpg',
+      '../images/canada/06.jpg',
+      '../images/canada/01.jpg',
+      '../images/canada/02.jpg',
     ],
     daysRange: '6-13 days',
     priceRange: '$1,900 and above',
@@ -88,7 +88,7 @@ const CanadaPage: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/destination-1.jpg)',
+          backgroundImage: 'url(../images/canada/06.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
@@ -152,6 +152,7 @@ const CanadaPage: React.FC = () => {
         <h3 style={{ color: '#7F0203', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
           Highlights to Inspire Your Journey
         </h3>
+        <hr />
         <ul style={{ color: 'black', fontSize: '1.1rem', lineHeight: '1.6', paddingLeft: '1.2rem' }}>
           <li><strong>Iconic Landmarks:</strong> Niagara Falls, CN Tower, Château Frontenac, Parliament Hill</li>
           <li><strong>Natural Wonders:</strong> Banff & Jasper National Parks, Lake Louise, Northern Lights, Gros Morne National Park</li>

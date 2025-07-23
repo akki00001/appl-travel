@@ -10,7 +10,7 @@ const tourCards = [
     originalPrice: 'INR 1,08,383',
     discountAmount: 'INR 43,483',
     finalPrice: 'INR 64,900',
-    image: '/images/pexels-suraphat-937465.jpg',
+    image: '../images/Thailand/01.jpg',
   },
   {
     duration: '8 days & 7 nights',
@@ -21,7 +21,7 @@ const tourCards = [
     originalPrice: 'INR 80,061',
     discountAmount: 'INR 36,071',
     finalPrice: 'INR 43,990',
-    image: '/images/pexels-javon-swaby-197616-2797526.jpg',
+    image: '../images/Thailand/02.jpg',
   },
   {
     duration: '5 days & 4 nights',
@@ -32,7 +32,7 @@ const tourCards = [
     originalPrice: 'INR 74,100',
     discountAmount: 'INR 35,100',
     finalPrice: 'INR 39,000',
-    image: '/images/pexels-freestockpro-1929611.jpg',
+    image: '../images/Thailand/03.jpg',
   },
 ];
 
@@ -47,7 +47,7 @@ const ThailandPage: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/pexels-streetwindy-2108831.jpg)',
+          backgroundImage: 'url(../images/Thailand/02.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
