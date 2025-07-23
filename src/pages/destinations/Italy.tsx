@@ -14,9 +14,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Classic Italy Discovery',
     images: [
-      '/images/rome-italy-europe-travel-tourism-scaled.webp',
-      '/images/Positano-Italy-1-1129x631.jpg.webp',
-      '/images/canal-6519196__340.webp',
+      '/images/italy/01.jpg',
+      '/images/italy/02.jpg',
+      '/images/italy/03.jpg',
     ],
     daysRange: '6-10 days',
     priceRange: '₹1,35,000 and above',
@@ -38,9 +38,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Northern Treasures',
     images: [
-      '/images/canal-6519196__340.webp',
-      '/images/Positano-Italy-1-1129x631.jpg.webp',
-      '/images/rome-italy-europe-travel-tourism-scaled.webp',
+      '/images/italy/03.jpg',
+      '/images/italy/01.jpg',
+      '/images/italy/04.jpg',
     ],
     daysRange: '6-10 days',
     priceRange: '₹1,35,000 and above',
@@ -62,9 +62,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Southern Charms',
     images: [
-      '/images/Positano-Italy-1-1129x631.jpg.webp',
-      '/images/canal-6519196__340.webp',
-      '/images/rome-italy-europe-travel-tourism-scaled.webp',
+      '/images/italy/04.jpg',
+      '/images/italy/05.jpg',
+      '/images/italy/01.jpg',
     ],
     daysRange: '6-10 days',
     priceRange: '₹1,35,000 and above',
@@ -92,7 +92,7 @@ const ItalyPage: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/pexels-fineasanton-2975228.jpg)',
+          backgroundImage: 'url(/images/italy/01.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
@@ -114,9 +114,11 @@ const ItalyPage: React.FC = () => {
           <h1 style={{ fontSize: '2.8rem', fontWeight: 700, margin: 0 }}>
             Discover Timeless Italy
           </h1>
+          <hr />
           <p style={{ fontSize: '1.3rem', margin: '1.2rem 0 2rem', fontWeight: 400 }}>
             Embark on an unforgettable journey through the heart of Italy with Astir Passage Pvt Ltd.
           </p>
+          <hr />
           <button
             style={{
               background: '#7F0203',

@@ -10,7 +10,7 @@ const tourCards = [
     originalPrice: 'INR 84,390',
     discountAmount: 'INR 18,090',
     finalPrice: 'INR 66,300',
-    image: '/images/united-arab-emirates-dubai-top-attractions-view-dubai-fountain-display.webp',
+    image: '/images/dubai/01.jpg',
   },
   {
     duration: '7 days & 6 nights',
@@ -21,7 +21,7 @@ const tourCards = [
     originalPrice: 'INR 1,35,999',
     discountAmount: 'INR 19,400',
     finalPrice: 'INR 1,16,599',
-    image: '/images/360_F_220097920_trWoLxuu8e8ovZJNoCfeadDdsoAyUxVD.webp',
+    image: '/images/dubai/02.jpg',
   },
   {
     duration: '8 days & 7 nights',
@@ -32,7 +32,7 @@ const tourCards = [
     originalPrice: 'INR 3,40,000',
     discountAmount: 'INR 53,080',
     finalPrice: 'INR 2,86,920',
-    image: '/images/the-palm-jumeirah-island-in-dubai-uae-aerial-view.webp',
+    image: '/images/dubai/03.jpg',
   },
 ];
 
@@ -47,7 +47,7 @@ const DubaiPage: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/pexels-nextvoyage-1467300.jpg)',
+          backgroundImage: 'url(/images/dubai/01.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',

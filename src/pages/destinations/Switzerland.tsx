@@ -14,9 +14,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Alpine Marvels',
     images: [
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
-      'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
-      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80',
+      '/images/Switzerland/04.jpg',
+      '/images/Switzerland/05.jpg',
+      '/images/Switzerland/01.jpg',
     ],
     daysRange: '3-11 days',
     priceRange: '₹1,42,000 and above',
@@ -37,9 +37,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Central Switzerland Highlights',
     images: [
-      'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
-      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
+      '/images/Switzerland/01.jpg',
+      '/images/Switzerland/05.jpg',
+      '/images/Switzerland/03.jpg',
     ],
     daysRange: '3-11 days',
     priceRange: '₹1,42,000 and above',
@@ -60,9 +60,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Zurich City Break',
     images: [
-      'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80',
-      'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
-      'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
+      '/images/Switzerland/02.jpg',
+      '/images/Switzerland/04.jpg',
+      '/images/Switzerland/01.jpg',
     ],
     daysRange: '3-11 days',
     priceRange: '₹1,42,000 and above',
@@ -91,7 +91,7 @@ const SwitzerlandPage: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/switzerland-hero-placeholder.jpg)',
+          backgroundImage: 'url(/images/Switzerland/01.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
@@ -172,40 +172,6 @@ const SwitzerlandPage: React.FC = () => {
           <TourCardComponent key={idx} card={card} />
         ))}
       </div>
-      <button
-        style={{
-          backgroundColor: '#7F0203',
-          color: 'white',
-          border: 'none',
-          borderRadius: '6px',
-          padding: '0.6rem 1.2rem',
-          fontWeight: '700',
-          cursor: 'pointer',
-          margin: '0 1rem 1rem 1rem',
-          width: 'calc(100% - 2rem)',
-          textAlign: 'center',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '0.5rem',
-        }}
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          style={{ width: '20px', height: '20px' }}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M2.25 6.75c0 8.284 6.716 15 15 15h3.75a2.25 2.25 0 002.25-2.25v-2.25a2.25 2.25 0 00-2.25-2.25h-1.5a2.25 2.25 0 01-2.25-2.25v-1.5a2.25 2.25 0 012.25-2.25h1.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H17.25a2.25 2.25 0 00-2.25 2.25v.75"
-          />
-        </svg>
-        Request Callback
-      </button>
     </div>
   );
 };
