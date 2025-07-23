@@ -26,7 +26,7 @@ const destinations: Destination[] = [
   { name: 'Bali', image: '/images/bali/01.jpg', tours: 6, path: '/destination/bali' },
   // Itinerary entries
   // { name: 'Memorable Bali Itinerary', image: '/images/bali/02.jpg', tours: 1, path: '/destination/bali/memorable-bali' },
-  { name: 'Bali Bliss Itinerary', image: '/images/bali/03.jpg', tours: 1, path: '/destination/bali/bali-bliss' },
+  // { name: 'Bali Bliss Itinerary', image: '/images/bali/03.jpg', tours: 1, path: '/destination/bali/bali-bliss' },
 ];
 
 interface DestinationSliderProps {
