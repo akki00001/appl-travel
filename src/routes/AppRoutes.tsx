@@ -26,6 +26,7 @@ import DubaiPage from '../pages/destinations/Dubai';
 import ItalyPage from '../pages/destinations/Italy';
 import SwitzerlandPage from '../pages/destinations/Switzerland';
 import JapanPage from '../pages/destinations/Japan';
+import Dashboard from '../pages/Dashboard';
 
 interface AppRoutesProps {
   searchTerm: string;
@@ -58,6 +59,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/destination/canada" element={<CanadaPage />} />
       <Route path="/destination/italy" element={<ItalyPage />} />
       <Route path="/destination/japan" element={<JapanPage />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
 };
