@@ -25,7 +25,7 @@ const destinations: Destination[] = [
   { name: 'Greece', image: '/images/destination-10.jpg', tours: 7, path: '#' },
   { name: 'Bali', image: '/images/bali/01.jpg', tours: 6, path: '/destination/bali' },
   // Itinerary entries
-  { name: 'Memorable Bali Itinerary', image: '/images/bali/02.jpg', tours: 1, path: '/destination/bali/memorable-bali' },
+  // { name: 'Memorable Bali Itinerary', image: '/images/bali/02.jpg', tours: 1, path: '/destination/bali/memorable-bali' },
   { name: 'Bali Bliss Itinerary', image: '/images/bali/03.jpg', tours: 1, path: '/destination/bali/bali-bliss' },
 ];
 

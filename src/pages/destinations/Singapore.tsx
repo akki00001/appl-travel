@@ -3,7 +3,7 @@ import React from 'react';
 const tourCards = [
   {
     title: 'Instagrammable Singapore | A City Of Wonders',
-    image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80',
+    image: '../images/singapore/01.jpg',
     days: 5,
     nights: 4,
     rating: 5.0,
@@ -16,7 +16,7 @@ const tourCards = [
   },
   {
     title: 'Singapore Getaway | FREE Night Safari Zoo Visit',
-    image: 'https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80',
+    image: '../images/singapore/02.jpg',
     days: 4,
     nights: 3,
     rating: 4.9,
@@ -29,7 +29,7 @@ const tourCards = [
   },
   {
     title: 'Romantic Singapore Vacation | Free Adventure Cove Waterpark Tickets',
-    image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=600&q=80',
+    image: '../images/singapore/03.jpg',
     days: 6,
     nights: 5,
     rating: 4.5,
@@ -53,7 +53,7 @@ const SingaporePage: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/singapore-hero-placeholder.jpg)', // Placeholder image path
+          backgroundImage: 'url(../images/singapore/10.jpg)', // Placeholder image path
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',

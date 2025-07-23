@@ -3,7 +3,7 @@ import React from 'react';
 const tourCards = [
   {
     title: 'Explore Japan | Journey To The Cultural Treasure Trove',
-    image: '/images/tourist-places-in-japan1.webp',
+    image: '/images/japan/04.jpg',
     days: 6,
     nights: 5,
     rating: 4.5,
@@ -16,7 +16,7 @@ const tourCards = [
   },
   {
     title: 'Jewels Of Japan | Tokyo To Osaka Discovery',
-    image: '/images/tourist-places-in-japan6.webp',
+    image: '/images/japan/03.jpg',
     days: 7,
     nights: 6,
     rating: 5.0,
@@ -29,7 +29,7 @@ const tourCards = [
   },
   {
     title: 'Discover Japan | From Tokyo Skylines To Osaka Sights',
-    image: '/images/tourist-places-in-japan24.webp',
+    image: '/images/japan/02.jpg',
     days: 8,
     nights: 7,
     rating: 5.0,
@@ -53,7 +53,7 @@ const JapanPage: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/pexels-apasaric-2339009.jpg)',
+          backgroundImage: 'url(/images/japan/01.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
@@ -103,6 +103,7 @@ const JapanPage: React.FC = () => {
         <h2 style={{ color: '#7F0203', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
           Discover Captivating Japan
         </h2>
+        <hr />
         <p style={{ color: 'black', fontWeight: 'normal', marginBottom: '1.5rem', padding: 0, fontSize: '1.1rem', lineHeight: '1.6' }}>
           Embark on an enchanting journey through the Land of the Rising Sun with Astir Passage Pvt Ltd. Japan is a mesmerizing blend of ancient traditions and cutting-edge modernity, where serene temples nestle beside neon-lit cityscapes, and cherry blossoms frame the majestic silhouette of Mount Fuji. Wander through the bustling streets of Tokyo, experience the timeless beauty of Kyoto’s shrines and gardens, and savor the culinary delights of Osaka’s vibrant markets.
         </p>
@@ -115,6 +116,7 @@ const JapanPage: React.FC = () => {
         <h3 style={{ color: '#7F0203', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
           Highlights to Inspire Your Journey
         </h3>
+        <hr />
         <ul style={{ color: 'black', fontSize: '1.1rem', lineHeight: '1.6', paddingLeft: '1.2rem' }}>
           <li><strong>Iconic Landmarks:</strong> Mount Fuji, Tokyo Tower, Fushimi Inari Shrine, Osaka Castle, Itsukushima Shrine, Himeji Castle</li>
           <li><strong>Cultural Experiences:</strong> Tea ceremonies in Kyoto, geisha encounters in Gion, sumo wrestling in Tokyo, staying in a ryokan, bathing in onsen hot springs</li>
