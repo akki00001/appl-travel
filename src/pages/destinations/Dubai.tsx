@@ -69,6 +69,7 @@ const DubaiPage: React.FC = () => {
           <h1 style={{ fontSize: '2.8rem', fontWeight: 700, margin: 0 }}>
             Discover Dynamic Dubai
           </h1>
+          <hr />
           <p style={{ fontSize: '1.3rem', margin: '1.2rem 0 2rem', fontWeight: 400 }}>
             From futuristic architecture to desert adventures—find your perfect Dubai experience with us.
           </p>
@@ -97,6 +98,7 @@ const DubaiPage: React.FC = () => {
         <h2 style={{ color: '#7F0203', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
           Discover Dazzling Dubai
         </h2>
+        <hr />
         <p style={{ color: 'black', fontWeight: 'normal', marginBottom: '1.5rem', padding: 0, fontSize: '1.1rem', lineHeight: '1.6' }}>
           Embark on a journey to the City of Gold with Astir Passage Pvt Ltd. Dubai is a mesmerizing blend of futuristic skyscrapers, rich traditions, and luxurious experiences. Gaze at the world from the heights of the iconic Burj Khalifa, stroll through the vibrant souks of Old Dubai, and indulge in global shopping and gourmet delights at the Dubai Mall.
         </p>
@@ -109,6 +111,7 @@ const DubaiPage: React.FC = () => {
         <h3 style={{ color: '#7F0203', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
           Highlights to Inspire Your Journey
         </h3>
+        <hr />
         <ul style={{ color: 'black', fontSize: '1.1rem', lineHeight: '1.6', paddingLeft: '1.2rem' }}>
           <li><strong>Iconic Landmarks:</strong> Burj Khalifa, Burj Al Arab, Palm Jumeirah, Dubai Frame</li>
           <li><strong>Desert Experiences:</strong> Thrilling desert safaris, camel rides, sandboarding, and Bedouin-style dinners</li>
