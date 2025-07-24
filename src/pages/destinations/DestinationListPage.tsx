@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/pages/_destinationlistpage.scss';
@@ -39,7 +38,7 @@ const destinations: Destination[] = [
     unit: "/Adult"
   },
   {
-    path: "/destination/bali",
+    path: "/destination/bali/memorable-bali",
     title: "Memorable Bali",
     images: ["/images/bali/01.jpg", "/images/bali/02.jpg", "/images/bali/03.jpg"],
     duration: "5 days & 6 nights",
@@ -57,7 +56,7 @@ const destinations: Destination[] = [
     unit: "/Adult"
   },
   {
-    path: "/destination/switzerland",
+    path: "/destination/switzerland-itinerary",
     title: "Scenic Switzerland Tour with Mt. Titlis & Jungfraujoch",
     images: ["/images/Switzerland/01.jpg", "/images/Switzerland/02.jpg", "/images/Switzerland/03.jpg"],
     duration: "8 days & 7 nights",
@@ -90,6 +89,24 @@ const destinations: Destination[] = [
     originalPrice: "INR 44,500",
     discount: "SAVE INR 8,500",
     finalPrice: "INR 36,000",
+    unit: "/Adult"
+  },
+  {
+    path: "/destination/switzerland",
+    title: "Scenic Switzerland Tour with Mt. Titlis & Jungfraujoch",
+    images: ["/images/Switzerland/01.jpg", "/images/Switzerland/02.jpg", "/images/Switzerland/03.jpg"],
+    duration: "8 days & 7 nights",
+    rating: 4.8,
+    reviews: 60,
+    locations: [
+      { label: "2D", name: "Zurich" },
+      { label: "2D", name: "Lucerne" },
+      { label: "2D", name: "Interlaken" }
+    ],
+    overflow: "+3",
+    originalPrice: "INR 89,000",
+    discount: "SAVE INR 15,000",
+    finalPrice: "INR 74,000",
     unit: "/Adult"
   },
   {
@@ -164,7 +181,7 @@ const destinations: Destination[] = [
     unit: "/Adult"
   },
   {
-    path: "/destination/dubai",
+    path: "/destination/dubai/itinerary",
     title: "Dubai Dream Tour with Desert Safari & Burj Khalifa",
     images: ["/images/dubai/01.jpg", "/images/dubai/02.jpg", "/images/dubai/03.jpg"],
     duration: "5 days & 4 nights",
@@ -200,8 +217,6 @@ const destinations: Destination[] = [
   // }
 ];
 
-// Code continues...
-
 const DestinationListPage: React.FC = () => {
   const [imageIndices, setImageIndices] = useState<number[]>(
     Array(destinations.length).fill(0)
@@ -228,61 +243,61 @@ const DestinationListPage: React.FC = () => {
               />
               <div className="save-badge">{item.discount}</div>
               <div className="dot-nav">
-                {item.images.map((_, dotIndex) => (
-                  <span
-                    key={dotIndex}
-                    className={`dot ${
-                      dotIndex === imageIndices[index] ? 'active' : ''
-                    }`}
-                    onClick={(e) => handleDotClick(e, index, dotIndex)}
-                  />
-                ))}
+                {item.images.map((_, dotIndex) => {
+                  return (
+                    <span
+                      key={dotIndex}
+                      className={`dot ${dotIndex === imageIndices[index] ? 'active' : ''}`}
+                      onClick={(e: React.MouseEvent<HTMLSpanElement>) => handleDotClick(e, index, dotIndex)}
+                    ></span>
+                  );
+                })}
               </div>
             </div>
 
-              <div className="content">
-                <div className="content-main">
-                  <div className="top-row">
-                    <span>{item.duration}</span>
-                    <span className="rating">
-                      <i className="fa fa-star" /> {item.rating}
-                      <span className="count">({item.reviews})</span>
-                    </span>
-                  </div>
-
-                  <Link to={item.path}>
-                    <h3>{item.title}</h3>
-                  </Link>
-
-                  <div className="locations">
-                    {item.locations.map((loc, i) => (
-                      <span key={i}>
-                        <b>{loc.label}</b> {loc.name}
-                        {i < item.locations.length - 1 && (
-                          <span className="sep">•</span>
-                        )}
-                      </span>
-                    ))}
-                    <span className="overflow">{item.overflow}</span>
-                  </div>
-
-                  <div className="monsoon-badge">MONSOON SALE!</div>
-
-                  <div className="pricing">
-                    <span className="strike">{item.originalPrice}</span>
-                    <span className="discount">{item.discount}</span>
-                  </div>
-
-                  <div className="final-price">
-                    {item.finalPrice} <span>{item.unit}</span>
-                  </div>
+            <div className="content">
+              <div className="content-main">
+                <div className="top-row">
+                  <span>{item.duration}</span>
+                  <span className="rating">
+                    <i className="fa fa-star" /> {item.rating}
+                    <span className="count">({item.reviews})</span>
+                  </span>
                 </div>
 
-                <button className="callback-btn">
-                  <i className="fa fa-phone" />
-                  Request Callback
-                </button>
+                <Link to={item.path}>
+                  <h3>{item.title}</h3>
+                </Link>
+
+                <div className="locations">
+                  {item.locations.map((loc, i) => (
+                    <span key={i}>
+                      <b>{loc.label}</b> {loc.name}
+                      {i < item.locations.length - 1 && (
+                        <span className="sep">•</span>
+                      )}
+                    </span>
+                  ))}
+                  <span className="overflow">{item.overflow}</span>
+                </div>
+
+                <div className="monsoon-badge">MONSOON SALE!</div>
+
+                <div className="pricing">
+                  <span className="strike">{item.originalPrice}</span>
+                  <span className="discount">{item.discount}</span>
+                </div>
+
+                <div className="final-price">
+                  {item.finalPrice} <span>{item.unit}</span>
+                </div>
               </div>
+
+              <button className="callback-btn">
+                <i className="fa fa-phone" />
+                Request Callback
+              </button>
+            </div>
           </div>
         ))}
       </div>
