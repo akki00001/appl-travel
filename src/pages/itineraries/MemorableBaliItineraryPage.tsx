@@ -1,15 +1,15 @@
 import React from 'react';
 import ItineraryLayout from '../../components/ItineraryLayout';
-import BaliTourCards from '../../components/tours/BaliTourCards';
 import SEO from '../../components/common/SEO';
+import BaliHero from '../../components/tours/balihero';
 
 const MemorableBaliItineraryPage: React.FC = () => {
   const itineraryDetails = {
-    title: 'Memorable Bali',
+    title: 'Memorable Bali Itinerary',
     duration: '6 Days / 5 Nights',
-    locations: 'Bali',
-    price: '21,001',
-    overview: 'Create lasting memories with this comprehensive tour of Bali, covering the best of its cultural and natural attractions.',
+    locations: 'Denpasar • Ubud • Kintamani • Uluwatu',
+    price: '15,000',
+    overview: 'Explore the beautiful island of Bali with this memorable itinerary that covers stunning landscapes, cultural sites, and relaxing beach days.',
     itinerary: [
       {
         day: 1,
@@ -64,7 +64,7 @@ const MemorableBaliItineraryPage: React.FC = () => {
         keywords="Bali, Kintamani, Uluwatu, Tanah Lot, Astir Travel"
       />
       <ItineraryLayout itinerary={itineraryDetails}>
-        <BaliTourCards />
+        <BaliHero />
       </ItineraryLayout>
     </>
   );
