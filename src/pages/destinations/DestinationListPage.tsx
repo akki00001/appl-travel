@@ -92,7 +92,7 @@ const destinations: Destination[] = [
     unit: "/Adult"
   },
   {
-    path: "/destination/switzerland",
+    path: "/destination/switzerland-itinerary",
     title: "Scenic Switzerland Tour with Mt. Titlis & Jungfraujoch",
     images: ["/images/Switzerland/01.jpg", "/images/Switzerland/02.jpg", "/images/Switzerland/03.jpg"],
     duration: "8 days & 7 nights",
