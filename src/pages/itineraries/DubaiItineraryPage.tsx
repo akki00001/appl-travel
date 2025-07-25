@@ -1,6 +1,8 @@
 import React from 'react';
 import ItineraryLayout from '../../components/ItineraryLayout';
 import SEO from '../../components/common/SEO';
+import Maldives from '../../components/tours/DubaiHero';
+import DubaiHero from '../../components/tours/DubaiHero';
 
 const DubaiItineraryPage: React.FC = () => {
   const itineraryDetails = {
@@ -56,8 +58,8 @@ const DubaiItineraryPage: React.FC = () => {
         description={`Discover the detailed itinerary for the ${itineraryDetails.title}.`}
         keywords="Dubai, Burj Khalifa, desert safari, Dubai Marina, Astir Travel"
       />
-      <ItineraryLayout itinerary={itineraryDetails}>
-        <></>
+       <ItineraryLayout itinerary={itineraryDetails}>
+        <DubaiHero />
       </ItineraryLayout>
     </>
   );

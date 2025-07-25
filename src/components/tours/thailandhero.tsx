@@ -1,17 +1,17 @@
 import React from 'react';
 
-const AustraliaHeader: React.FC = () => {
+const ThailandHero: React.FC = () => {
   return (
     <div style={{ fontFamily: 'sans-serif' }}>
       <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '0.5rem', padding: '1rem' }}>
         <div style={{ gridColumn: '1 / 2', gridRow: '1 / 3' }}>
-          <img src="/images/Australia/01.jpg" alt="Ladakh" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
+          <img src="/images/Thailand/01.jpg" alt="Ladakh" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
         </div>
-        <img src="/images/Australia/02.jpg" alt="Destinations" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
-        <img src="/images/Australia/03.jpg" alt="Stays" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
-        <img src="/images/Austrailia/04.jpg" alt="Activity" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
+        <img src="/images/Thailand/02.jpg" alt="Destinations" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
+        <img src="/images/Thailand/03.jpg" alt="Stays" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
+        <img src="/images/Thailand/04.jpg" alt="Activity" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
         <div style={{ position: 'relative' }}>
-          <img src="/images/Australia/05.jpg" alt="Sightseeing" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
+          <img src="/images/Thailand/05.jpg" alt="Sightseeing" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '0.5rem' }} />
           <button style={{ position: 'absolute', bottom: '1rem', right: '1rem', background: 'white', border: '1px solid #ddd', padding: '0.5rem 1rem', borderRadius: '0.5rem', cursor: 'pointer' }}>
             View All Images
           </button>
@@ -19,15 +19,14 @@ const AustraliaHeader: React.FC = () => {
       </div>
 
       <div style={{ padding: '1rem' }}>
-        <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Memorable Bali Itinerary</h1>
+        <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>Thailand Trio: Bangkok, Phuket & Krabi</h1>
         <hr />
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', margin: '1rem 0' }}>
           <span style={{ background: '#ffc107', color: '#333', padding: '0.25rem 0.75rem', borderRadius: '0.5rem', fontWeight: 'bold' }}>6D/5N</span>
-          <span>6 Days / 5 Nights</span>
-          <span>Denpasar</span>
-          <span>Ubud</span>
-          <span>Kintamani</span>
-          <span>Uluwatu</span>
+          <span>7 Days / 6 Nights</span>
+          <span>Bangkok</span>
+          <span>Phuket</span>
+          <span>Krabi</span>
 
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -50,4 +49,4 @@ const AustraliaHeader: React.FC = () => {
   );
 };
 
-export default AustraliaHeader;
+export default ThailandHero;

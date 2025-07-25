@@ -1,7 +1,8 @@
 import React from 'react';
 import ItineraryLayout from '../../components/ItineraryLayout';
 import SEO from '../../components/common/SEO';
-
+import Maldives from '../../components/tours/Himachal';
+import Himachal from '../../components/tours/Himachal';
 const HimachalItineraryPage: React.FC = () => {
   const itineraryDetails = {
     title: 'Himachal Delights: Shimla, Manali & Kasol',
@@ -63,7 +64,7 @@ const HimachalItineraryPage: React.FC = () => {
         keywords="Himachal, Shimla, Manali, Kasol, Solang Valley, Astir Travel"
       />
       <ItineraryLayout itinerary={itineraryDetails}>
-        <></>
+        <Himachal />
       </ItineraryLayout>
     </>
   );

@@ -1,7 +1,8 @@
 import React from 'react';
 import ItineraryLayout from '../../components/ItineraryLayout';
 import SEO from '../../components/common/SEO';
-
+import KashmirHero from '../../components/tours/maldives';
+import Maldives from '../../components/tours/maldives';
 const MaldivesItineraryPage: React.FC = () => {
   const itineraryDetails = {
     title: 'Magical Maldives Honeymoon with Water Villa Stay',
@@ -50,8 +51,8 @@ const MaldivesItineraryPage: React.FC = () => {
         description={`Discover the detailed itinerary for the ${itineraryDetails.title}.`}
         keywords="Maldives, Male, water villa, honeymoon, Astir Travel"
       />
-      <ItineraryLayout itinerary={itineraryDetails}>
-        <></>
+       <ItineraryLayout itinerary={itineraryDetails}>
+        <Maldives />
       </ItineraryLayout>
     </>
   );

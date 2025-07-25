@@ -52,10 +52,12 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/destination/australia/sydney" element={<AustraliaPage />} />
       <Route path="/destination/ladakh" element={<LadakhItineraryPage />} />
       <Route path="/destination/thailand" element={<ThailandPage />} />
+      <Route path="/destination/thailand-itinerary" element={<ThailandItineraryPage />} />
       <Route path="/destination/kashmir" element={<KashmirItineraryPage />} />
       <Route path="/destination/maldives" element={<MaldivesItineraryPage />} />
       <Route path="/destination/himachal" element={<HimachalItineraryPage />} />
       <Route path="/destination/dubai" element={<DubaiPage />} />
+      <Route path="/destination/dubai/itinerary" element={<DubaiItineraryPage />} />
       <Route path="/destination/canada" element={<CanadaPage />} />
       <Route path="/destination/italy" element={<ItalyPage />} />
       <Route path="/destination/japan" element={<JapanPage />} />

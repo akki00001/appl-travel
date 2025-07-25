@@ -66,7 +66,7 @@ const RatingSummary: React.FC<RatingSummaryProps> = ({
   const starPositions = [
     { left: '0%', top: '20px', fontSize: starSizeSmall },
     { left: '20%', top: '0px', fontSize: starSizeSmall },
-    { left: '40%', top: '-10px', fontSize: starSizeLarge },
+    { left: '36%', top: '-16px', fontSize: starSizeLarge },
     { left: '60%', top: '0px', fontSize: starSizeSmall },
     { left: '80%', top: '20px', fontSize: starSizeSmall },
   ];

@@ -74,7 +74,7 @@ const destinations: Destination[] = [
     unit: "/Adult"
   },
   {
-    path: "/destination/thailand",
+    path: "/destination/thailand-itinerary",
     title: "Thailand Trio: Bangkok, Phuket & Krabi",
     images: ["/images/Thailand/01.jpg", "/images/Thailand/02.jpg", "/images/Thailand/03.jpg"],
     duration: "7 days & 6 nights",

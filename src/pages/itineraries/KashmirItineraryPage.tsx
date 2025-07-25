@@ -1,6 +1,7 @@
 import React from 'react';
 import ItineraryLayout from '../../components/ItineraryLayout';
 import SEO from '../../components/common/SEO';
+import KashmirHero from '../../components/tours/KashmirHero';
 
 const KashmirItineraryPage: React.FC = () => {
   const itineraryDetails = {
@@ -57,7 +58,7 @@ const KashmirItineraryPage: React.FC = () => {
         keywords="Kashmir, Srinagar, Gulmarg, Pahalgam, Dal Lake, Astir Travel"
       />
       <ItineraryLayout itinerary={itineraryDetails}>
-        <></>
+        <KashmirHero />
       </ItineraryLayout>
     </>
   );

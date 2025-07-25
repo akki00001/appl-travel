@@ -1,6 +1,7 @@
 import React from 'react';
 import ItineraryLayout from '../../components/ItineraryLayout';
 import SEO from '../../components/common/SEO';
+import ThailandHero from '../../components/tours/thailandhero';
 
 const ThailandItineraryPage: React.FC = () => {
   const itineraryDetails = {
@@ -68,8 +69,9 @@ const ThailandItineraryPage: React.FC = () => {
         description={`Discover the detailed itinerary for the ${itineraryDetails.title}.`}
         keywords="Thailand, Bangkok, Phuket, Krabi, Phi Phi Islands, Astir Travel"
       />
+      
       <ItineraryLayout itinerary={itineraryDetails}>
-        <></>
+        <ThailandHero />
       </ItineraryLayout>
     </>
   );
