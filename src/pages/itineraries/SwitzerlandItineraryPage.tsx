@@ -1,6 +1,6 @@
 import React from 'react';
 import ItineraryLayout from '../../components/ItineraryLayout';
-// import SwitzerlandTourCards from '../../components/tours/SwitzerlandTourCards';
+import Switzerlandhero from '../../components/tours/Switzerlandhero';
 import SEO from '../../components/common/SEO';
 
 const SwitzerlandItineraryPage: React.FC = () => {
@@ -75,8 +75,8 @@ const SwitzerlandItineraryPage: React.FC = () => {
         description={`Discover the detailed itinerary for the ${itineraryDetails.title}.`}
         keywords="Switzerland, Zurich, Lucerne, Interlaken, Mt. Titlis, Jungfraujoch, Astir Travel"
       />
-      <ItineraryLayout itinerary={itineraryDetails} children={undefined}>
-        {/* <SwitzerlandTourCards /> */}
+      <ItineraryLayout itinerary={itineraryDetails}>
+      <Switzerlandhero />
       </ItineraryLayout>
     </>
   );

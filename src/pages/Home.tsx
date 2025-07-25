@@ -10,6 +10,7 @@ import TestimonialSection from "../components/home/TestimonialSection";
 import RecentPost from "../components/blog/RecentPosts";
 import AboutSection from "../components/home/AboutSection";
 import FAQ from '../components/FAQ';
+import RatingSummary from '../components/common/RatingSummary';
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -59,10 +60,16 @@ const Home: React.FC<HomeProps> = ({ searchTerm }) => {
       <DestinationListPage />
       {/* <HeroHighlightSection /> */}
       <AboutSection />
-       <TestimonialSection />
-       <RecentPost />
-       <FAQ />
-
+      <TestimonialSection />
+      <RecentPost />
+        <RatingSummary
+        title="APPL Travels Tour Reviews"
+        totalReviews={50}
+        averageRating={5.0}
+        countriesCount={65}
+        ratingsCount={{ '5': 29, '4': 19, '3': 2, '2': 0, '1': 0 }}
+      />
+      <FAQ />
     </>
   );
 };
