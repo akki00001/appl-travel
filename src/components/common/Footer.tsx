@@ -29,14 +29,14 @@ const Footer = () => {
           {/* About */}
           <div className={styles.column}>
             <h4>ABOUT ASTIR PASSAGE PVT LTD</h4>
-            <ul>
-              <li>About Us</li>
-              <li>We Are Hiring</li>
-              <li>astirpassage Reviews</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policies</li>
-              <li>Copyright Policies</li>
-              <li>Support</li>
+          <ul>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/we-are-hiring">We Are Hiring</Link></li>
+              <li><Link to="/reviews">astirpassage Reviews</Link></li>
+              <li><Link to="/terms-and-conditions">Terms & Conditions</Link></li>
+              <li><Link to="/privacy-policies">Privacy Policies</Link></li>
+              <li><Link to="/copyright-policies">Copyright Policies</Link></li>
+              <li><Link to="/support">Support</Link></li>
               <li className={styles.beware}>Beware of Frauds ⚠️</li>
             </ul>
           </div>

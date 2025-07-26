@@ -28,6 +28,13 @@ import SwitzerlandPage from '../pages/destinations/Switzerland';
 import JapanPage from '../pages/destinations/Japan';
 import Dashboard from '../pages/Dashboard';
 
+import WeAreHiring from '../pages/WeAreHiring';
+import Reviews from '../pages/Reviews';
+import TermsAndConditions from '../pages/TermsAndConditions';
+import PrivacyPolicies from '../pages/PrivacyPolicies';
+import CopyrightPolicies from '../pages/CopyrightPolicies';
+import Support from '../pages/Support';
+
 interface AppRoutesProps {
   searchTerm: string;
 }
@@ -39,6 +46,12 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/packages" element={<Packages />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/we-are-hiring" element={<WeAreHiring />} />
+      <Route path="/reviews" element={<Reviews />} />
+      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+      <Route path="/privacy-policies" element={<PrivacyPolicies />} />
+      <Route path="/copyright-policies" element={<CopyrightPolicies />} />
+      <Route path="/support" element={<Support />} />
       <Route path="/destination/bali" element={<BaliItineraryPage />} />
       <Route path="/destination/bali/itinerary" element={<BaliItineraryPage />} />
       <Route path="/destination/bali/memorable-bali" element={<MemorableBaliItineraryPage />} />
