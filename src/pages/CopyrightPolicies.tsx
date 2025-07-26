@@ -8,6 +8,7 @@ const CopyrightPolicies = () => {
         title="Copyright Policies - Astir Passage"
         description="Understand the copyright and intellectual property policies of Astir Passage."
         keywords="copyright, policies, intellectual property, Astir Passage"
+        url="https://astir-travel.netlify.app/copyright-policies"
       />
       <div className="container mt-5">
         <h1 className="text-center text-info">Copyright Policies</h1>

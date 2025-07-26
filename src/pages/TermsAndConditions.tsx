@@ -8,6 +8,7 @@ const TermsAndConditions = () => {
         title="Terms & Conditions - Astir Passage"
         description="Read the terms and conditions for using Astir Passage services."
         keywords="terms, conditions, policies, Astir Passage"
+        url="https://astir-travel.netlify.app/terms-and-conditions"
       />
       <div className="container mt-5">
         <h1 className="text-center text-info">Terms & Conditions</h1>

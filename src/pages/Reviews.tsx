@@ -26,6 +26,7 @@ const Reviews = () => {
         title="astirpassage Reviews - Astir Passage"
         description="Read customer testimonials and reviews about Astir Passage."
         keywords="reviews, testimonials, customer feedback, Astir Passage"
+        url="https://astir-travel.netlify.app/reviews"
       />
       <div className="container mt-5">
         <h1 className="text-center text-info">astirpassage Reviews</h1>

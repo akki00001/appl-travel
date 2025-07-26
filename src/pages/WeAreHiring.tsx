@@ -29,6 +29,7 @@ const WeAreHiring = () => {
         title="We Are Hiring - Astir Passage"
         description="Join the Astir Passage team. Explore current job openings and apply today."
         keywords="jobs, careers, hiring, Astir Passage"
+        url="https://astir-travel.netlify.app/we-are-hiring"
       />
       <div className="container mt-5">
         <h1 className="text-center text-info">We Are Hiring</h1>

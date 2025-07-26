@@ -31,6 +31,7 @@ const Support = () => {
         title="Support - Astir Passage"
         description="Contact Astir Passage support for assistance and inquiries."
         keywords="support, contact, help, Astir Passage"
+        url="https://astir-travel.netlify.app/support"
       />
       <div className="container mt-5">
         <h1 className="text-center text-info">Support</h1>

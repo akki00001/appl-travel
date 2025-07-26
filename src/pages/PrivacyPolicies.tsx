@@ -8,6 +8,7 @@ const PrivacyPolicies = () => {
         title="Privacy Policies - Astir Passage"
         description="Learn about how Astir Passage collects and uses your personal information."
         keywords="privacy, policies, data protection, Astir Passage"
+        url="https://astir-travel.netlify.app/privacy-policies"
       />
       <div className="container mt-5">
         <h1 className="text-center text-info">Privacy Policies</h1>
