@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/common/SEO';
 
 const WeAreHiring = () => {
   const jobs = [
@@ -23,20 +24,27 @@ const WeAreHiring = () => {
   ];
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>We Are Hiring</h1>
-      <p>Join our team! Below are the current job openings:</p>
-      <ul>
-        {jobs.map((job, index) => (
-          <li key={index} style={{ marginBottom: '1.5rem' }}>
-            <h2>{job.title}</h2>
-            <p><strong>Location:</strong> {job.location}</p>
-            <p>{job.description}</p>
-            <a href={job.applyLink} style={{ color: 'blue', textDecoration: 'none' }}>Apply Now</a>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <SEO
+        title="We Are Hiring - Astir Passage"
+        description="Join the Astir Passage team. Explore current job openings and apply today."
+        keywords="jobs, careers, hiring, Astir Passage"
+      />
+      <div className="container mt-5">
+        <h1 className="text-center text-info">We Are Hiring</h1>
+        <p className="text-muted text-center">Join our team! Below are the current job openings:</p>
+        <ul>
+          {jobs.map((job, index) => (
+            <li key={index} style={{ marginBottom: '1.5rem' }}>
+              <h2>{job.title}</h2>
+              <p><strong>Location:</strong> {job.location}</p>
+              <p>{job.description}</p>
+              <a href={job.applyLink} style={{ color: 'blue', textDecoration: 'none' }}>Apply Now</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 };
 
