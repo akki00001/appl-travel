@@ -15,7 +15,7 @@ interface Destination {
 
 const destinations: Destination[] = [
   { name: 'Canada', image: '/images/destination-1.jpg', tours: 2, path: '/destination/canada' },
-  { name: 'Thailand', image: '/images/destination-2.jpg', tours: 5, path: '/destination/thailand' },
+  { name: 'Thailand', image: '/images/destination-2.jpg', tours: 5, path: '/destination/thailand-itinerary' },
   { name: 'Dubai', image: '/images/dubai.jpg', tours: 4, path: '/destination/dubai' },
   { name: 'Italy', image: '/images/destination-9.jpg', tours: 8, path: '/destination/italy' },
   { name: 'Switzerland', image: '/images/destination-7.jpg', tours: 3, path: '/destination/switzerland' },

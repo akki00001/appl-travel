@@ -32,8 +32,8 @@ const destinations = [
   { name: 'Australia', path: '/destination/australia' },
   { name: 'Greece', path: '#' },
   { name: 'Bali', path: '/destination/bali' },
-  { name: 'Memorable Bali Itinerary', path: '/destination/bali/memorable-bali' },
-  { name: 'Bali Bliss Itinerary', path: '/destination/bali/bali-bliss' },
+  { name: 'Memorable Bali Itinerary', path: '/destination/bali' },
+  { name: 'Bali Bliss Itinerary', path: '/destination/bali' },
 ];
 
 interface HeaderProps {
