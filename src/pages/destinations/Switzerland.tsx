@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PopupForm from '../../components/common/PopupForm';
 
 interface TourCard {
   title: string;
@@ -81,6 +82,19 @@ const tourCards: TourCard[] = [
 ];
 
 const SwitzerlandPage: React.FC = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<string | undefined>(undefined);
+
+  const openPopup = (title: string) => {
+    setSelectedPackage(title);
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+    setSelectedPackage(undefined);
+  };
+
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#f8f9fa' }}>
       {/* Hero Section */}
@@ -169,14 +183,17 @@ const SwitzerlandPage: React.FC = () => {
         }}
       >
         {tourCards.map((card, idx) => (
-          <TourCardComponent key={idx} card={card} />
+          <TourCardComponent key={idx} card={card} openPopup={openPopup} />
         ))}
       </div>
+      {popupOpen && selectedPackage && (
+        <PopupForm destinationName={selectedPackage} onClose={closePopup} />
+      )}
     </div>
   );
 };
 
-const TourCardComponent: React.FC<{ card: TourCard }> = ({ card }) => {
+const TourCardComponent: React.FC<{ card: TourCard; openPopup: (title: string) => void }> = ({ card, openPopup }) => {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
 
   const nextImage = () => {
@@ -301,6 +318,23 @@ const TourCardComponent: React.FC<{ card: TourCard }> = ({ card }) => {
           </ul>
         </div>
         <p style={{ fontSize: '0.9rem', fontStyle: 'italic' }}>{card.specialNotes}</p>
+        <button
+          onClick={() => openPopup(card.title)}
+          style={{
+            backgroundColor: '#f12711',
+            color: 'white',
+            border: 'none',
+            borderRadius: '0.5rem',
+            padding: '0.5rem 1rem',
+            cursor: 'pointer',
+            fontWeight: 'bold',
+            marginTop: 'auto',
+            alignSelf: 'center',
+            marginBottom: '1rem',
+          }}
+        >
+          Request Callback
+        </button>
       </div>
     </div>
   );

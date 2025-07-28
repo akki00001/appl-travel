@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/components/_balitourcards.scss';
+import PopupForm from '../common/PopupForm';
 
 const australiaPackages = [
   {
@@ -36,6 +37,19 @@ const australiaPackages = [
 ];
 
 const AustraliaTourCards: React.FC = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<string | undefined>(undefined);
+
+  const openPopup = (title: string) => {
+    setSelectedPackage(title);
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+    setSelectedPackage(undefined);
+  };
+
   return (
     <section className="bali-tour-section">
       <div className="hero-content">
@@ -71,10 +85,16 @@ const AustraliaTourCards: React.FC = () => {
                   </Link>
                 </div>
               </div>
+              <button className="callback-btn" onClick={() => openPopup(pkg.title)}>
+                Request Callback
+              </button>
             </div>
           ))}
         </div>
       </div>
+      {popupOpen && selectedPackage && (
+        <PopupForm destinationName={selectedPackage} onClose={closePopup} />
+      )}
     </section>
   );
 };

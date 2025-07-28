@@ -22,6 +22,21 @@ const categories = [
   { name: "Dubai", icon: "/icons/dubai.svg" },
 ];
 
+const categoryPaths: Record<string, string> = {
+  "Vietnam": "/destination/vietnam",
+  "Goa": "/destination/goa",
+  "Kerala": "/destination/kerala",
+  "Himachal": "/destination/himachal",
+  "Europe": "/destination/europe",
+  "Bhutan": "/destination/bhutan",
+  "J&K": "/destination/jammu-and-kashmir",
+  "Malaysia": "/destination/malaysia",
+  "Maldives": "/destination/maldives",
+  "Thailand": "/destination/thailand",
+  "Sri Lanka": "/destination/srilanka",
+  "Dubai": "/destination/dubai",
+};
+
 const destinations = [
   { name: 'Canada', path: '/destination/canada' },
   { name: 'Thailand', path: '/destination/thailand' },
@@ -153,7 +168,16 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
         >
           {categories.map((item, i) => (
             <SwiperSlide key={i}>
-              <div className="icon-card">
+              <div
+                className="icon-card"
+                style={{ cursor: 'pointer' }}
+                onClick={() => {
+                  const path = categoryPaths[item.name];
+                  if (path) {
+                    navigate(path);
+                  }
+                }}
+              >
                 <img src={item.icon} alt={item.name} />
                 <p>{item.name}</p>
               </div>

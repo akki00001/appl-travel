@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/components/_balitourcards.scss';
 import { FaCalendarAlt, FaUserFriends, FaCamera } from 'react-icons/fa';
+import PopupForm from '../common/PopupForm';
 
 const tourPackages = [
   {
@@ -37,6 +38,19 @@ const tourPackages = [
 ];
 
 const BaliTourCards: React.FC = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<string | undefined>(undefined);
+
+  const openPopup = (title: string) => {
+    setSelectedPackage(title);
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+    setSelectedPackage(undefined);
+  };
+
   return (
     <section className="bali-tour-section">
       <div className="hero">
@@ -56,27 +70,35 @@ const BaliTourCards: React.FC = () => {
          <hr />
         <div className="card-container">
           {tourPackages.map((pkg, index) => (
-            <Link to={pkg.path} className="tour-card-link" key={index}>
-              <div className="tour-card">
-                <img src={pkg.image} alt={pkg.title} className="card-img" />
-                <div className="info">
-                  <div className="icons">
-                    <span><FaCalendarAlt /> {pkg.nights}</span>
-                    <span><FaUserFriends /> {pkg.people}</span>
-                    <span><FaCamera /> {pkg.rating}</span>
-                  </div>
-                  <h5>{pkg.title}</h5>
-                  <p><i className="location-icon"></i> {pkg.location}</p>
-                  <div className="bottom">
-                    <span className="price">{pkg.price}</span>
-                    <button className="explore-btn">Explore →</button>
+            <div key={index} className="tour-card-wrapper">
+              <Link to={pkg.path} className="tour-card-link">
+                <div className="tour-card">
+                  <img src={pkg.image} alt={pkg.title} className="card-img" />
+                  <div className="info">
+                    <div className="icons">
+                      <span><FaCalendarAlt /> {pkg.nights}</span>
+                      <span><FaUserFriends /> {pkg.people}</span>
+                      <span><FaCamera /> {pkg.rating}</span>
+                    </div>
+                    <h5>{pkg.title}</h5>
+                    <p><i className="location-icon"></i> {pkg.location}</p>
+                    <div className="bottom">
+                      <span className="price">{pkg.price}</span>
+                      <button className="explore-btn">Explore →</button>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+              <button className="callback-btn" onClick={() => openPopup(pkg.title)}>
+                Request Callback
+              </button>
+            </div>
           ))}
         </div>
       </div>
+      {popupOpen && selectedPackage && (
+        <PopupForm destinationName={selectedPackage} onClose={closePopup} />
+      )}
     </section>
   );
 };

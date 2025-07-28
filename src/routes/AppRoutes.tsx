@@ -28,6 +28,8 @@ import SwitzerlandPage from '../pages/destinations/Switzerland';
 import JapanPage from '../pages/destinations/Japan';
 import Dashboard from '../pages/Dashboard';
 
+import KeralaPage from '../pages/destinations/kerala';
+
 import WeAreHiring from '../pages/WeAreHiring';
 import Reviews from '../pages/Reviews';
 import TermsAndConditions from '../pages/TermsAndConditions';
@@ -74,6 +76,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/destination/canada" element={<CanadaPage />} />
       <Route path="/destination/italy" element={<ItalyPage />} />
       <Route path="/destination/japan" element={<JapanPage />} />
+      <Route path="/destination/kerala" element={<KeralaPage />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
