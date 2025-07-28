@@ -1,8 +1,8 @@
 import React from 'react';
 import ItineraryLayout from '../../components/ItineraryLayout';
 import SEO from '../../components/common/SEO';
-import KashmirHero from '../../components/tours/maldives';
-import Maldives from '../../components/tours/maldives';
+// import Maldives from '../../components/tours/Maldives';
+import Maldives from '../../components/tours/Maldives';
 const MaldivesItineraryPage: React.FC = () => {
   const itineraryDetails = {
     title: 'Magical Maldives Honeymoon with Water Villa Stay',

@@ -1,6 +1,13 @@
-import React from 'react';
+
+import React, { useState } from 'react';
+import PopupForm from '../common/PopupForm';
 
 const Maldives: React.FC = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const openPopup = () => setShowPopup(true);
+  const closePopup = () => setShowPopup(false);
+
   return (
     <div style={{ fontFamily: 'sans-serif' }}>
       <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '0.5rem', padding: '1rem' }}>
@@ -37,14 +44,19 @@ const Maldives: React.FC = () => {
           <div style={{ textAlign: 'right' }}>
             <p style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>INR 45,000 <span style={{ fontSize: '1rem', color: 'gray', textDecoration: 'line-through' }}>INR 48,000</span></p>
             <p style={{ color: 'gray' }}>Per Adult</p>
-            <button style={{ background: '#ff7f00', color: 'white', border: 'none', padding: '0.75rem 1.5rem', borderRadius: '0.5rem', fontWeight: 'bold', cursor: 'pointer', marginTop: '0.5rem' }}>
+            <button
+              style={{ background: '#ff7f00', color: 'white', border: 'none', padding: '0.75rem 1.5rem', borderRadius: '0.5rem', fontWeight: 'bold', cursor: 'pointer', marginTop: '0.5rem' }}
+              onClick={openPopup}
+            >
               Send Enquiry
             </button>
           </div>
         </div>
       </div>
+      {showPopup && <PopupForm destinationName="Magical Maldives Honeymoon with Water Villa Stay" onClose={closePopup} />}
     </div>
   );
 };
+
 
 export default Maldives;
