@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../assets/styles/pages/_destinationlistpage.scss';
+import PopupForm from '../../components/common/PopupForm';
 
 type Destination = {
   path: string;
@@ -92,24 +93,6 @@ const destinations: Destination[] = [
     unit: "/Adult"
   },
   {
-    path: "/destination/switzerland-itinerary",
-    title: "Scenic Switzerland Tour with Mt. Titlis & Jungfraujoch",
-    images: ["/images/Switzerland/01.jpg", "/images/Switzerland/02.jpg", "/images/Switzerland/03.jpg"],
-    duration: "8 days & 7 nights",
-    rating: 4.8,
-    reviews: 60,
-    locations: [
-      { label: "2D", name: "Zurich" },
-      { label: "2D", name: "Lucerne" },
-      { label: "2D", name: "Interlaken" }
-    ],
-    overflow: "+3",
-    originalPrice: "INR 89,000",
-    discount: "SAVE INR 15,000",
-    finalPrice: "INR 74,000",
-    unit: "/Adult"
-  },
-  {
     path: "/destination/australia/itinerary",
     title: "Australia Explorer: Sydney to Gold Coast",
     images: ["/images/Australia/01.jpg", "/images/Australia/02.jpg", "/images/Australia/03.jpg"],
@@ -197,24 +180,7 @@ const destinations: Destination[] = [
     discount: "SAVE INR 7,000",
     finalPrice: "INR 41,000",
     unit: "/Adult"
-  },
-  // {
-  //   title: "European Gems: Paris, Amsterdam & Brussels",
-  //   images: ["/images/destination-10a.jpg", "/images/destination-10b.jpg", "/images/destination-10c.jpg"],
-  //   duration: "10 days & 9 nights",
-  //   rating: 4.8,
-  //   reviews: 66,
-  //   locations: [
-  //     { label: "3D", name: "Paris" },
-  //     { label: "3D", name: "Amsterdam" },
-  //     { label: "3D", name: "Brussels" }
-  //   ],
-  //   overflow: "+2",
-  //   originalPrice: "INR 1,49,000",
-  //   discount: "SAVE INR 22,000",
-  //   finalPrice: "INR 1,27,000",
-  //   unit: "/Adult"
-  // }
+  }
 ];
 
 const DestinationListPage: React.FC = () => {
@@ -222,12 +188,25 @@ const DestinationListPage: React.FC = () => {
     Array(destinations.length).fill(0)
   );
 
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [selectedDestination, setSelectedDestination] = useState<string | undefined>(undefined);
+
   const handleDotClick = (e: React.MouseEvent, cardIndex: number, dotIndex: number) => {
     e.preventDefault();
     e.stopPropagation();
     const updated = [...imageIndices];
     updated[cardIndex] = dotIndex;
     setImageIndices(updated);
+  };
+
+  const openPopup = (destinationTitle: string) => {
+    setSelectedDestination(destinationTitle);
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+    setSelectedDestination(undefined);
   };
 
   return (
@@ -293,7 +272,7 @@ const DestinationListPage: React.FC = () => {
                 </div>
               </div>
 
-              <button className="callback-btn">
+              <button className="callback-btn" onClick={() => openPopup(item.title)}>
                 <i className="fa fa-phone" />
                 Request Callback
               </button>
@@ -301,6 +280,9 @@ const DestinationListPage: React.FC = () => {
           </div>
         ))}
       </div>
+      {popupOpen && (
+        <PopupForm destinationName={selectedDestination} onClose={closePopup} />
+      )}
     </section>
   );
 };
