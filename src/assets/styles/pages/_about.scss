@@ -4,7 +4,7 @@
   }
   
   .about-text p {
-    font-size: 1.1rem;
+    font-size: 4.1rem;
     line-height: 1.6;
     color: #666;
   }
@@ -22,7 +22,34 @@
       .icon {
         font-size: 1.5rem;
         color: var(--primary-color);
-        margin-right: 1rem;
+        margin-right: 0rem;
       }
     }
   }
+
+@media (max-width: 767.98px) {
+  .about-image-container {
+    display: block !important;
+    align-items: center;
+    margin: 4rem 0;
+  }
+
+  .about-image-container img {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+  }
+
+  .about-title {
+    display: block !important;
+  }
+
+  .about-paragraph {
+    display: block !important;
+  }
+
+  .about-text h6 {
+    display: block !important;
+  }
+}

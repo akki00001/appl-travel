@@ -26,6 +26,12 @@ body {
   display: block;
 }
 
+@media (max-width: 767.98px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
 .itinerary-container {
   display: flex;
   gap: 2rem;

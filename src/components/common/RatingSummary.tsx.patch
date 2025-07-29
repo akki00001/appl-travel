@@ -1,0 +1,4 @@
+<div style={{ position: 'relative', width: '120px', height: '130px' }}>
+=======
+      <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
+        <div style={{ position: 'relative', width: '120px', height: '130px', flex: '0 0 auto' }}>

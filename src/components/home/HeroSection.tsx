@@ -4,27 +4,9 @@ import BookingForm from '../booking/BookingForm';
 
 const HeroSection: React.FC = () => {
   return (
-    <section
-      style={{
-        backgroundImage: "url('/images/bg_5.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        minHeight: '100vh',
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
-    >
+    <section className="hero-wrap">
       {/* Overlay */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8))',
-          zIndex: 0,
-        }}
-      ></div>
+      <div className="hero-overlay"></div>
 
       {/* Content */}
       <div className="container text-white text-center position-relative" style={{ zIndex: 10, padding: '0 1rem', paddingBottom: '12rem' }}>
