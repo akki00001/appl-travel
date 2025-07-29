@@ -11,6 +11,16 @@ const faqs = [
   "What happens if my trip gets canceled or rescheduled? "
 ];
 
+const answers = [
+  "We offer a wide range of travel packages including domestic tours, international getaways, honeymoon packages, group tours, customized holidays, adventure trips, and weekend getaways.",
+  "Yes, you can customize your travel itinerary according to your preferences and interests. Our travel experts will work with you to create a personalized plan.",
+  "Flight booking is not included in all packages, but we do offer options to include flights upon request. Please check the package details or contact us for more information.",
+  "You can book a tour by contacting us through our website, phone, or email. Our team will assist you with the booking process and provide all necessary information.",
+  "Yes, we provide visa assistance for international tours to help you with the application process and documentation.",
+  "Our travel packages are designed to be family-friendly, with options suitable for travelers of all ages. Please specify your requirements when booking.",
+  "In case of trip cancellation or rescheduling, we will notify you promptly and offer alternative dates or refunds as per our policy."
+];
+
 const FAQ: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
@@ -26,7 +36,7 @@ const FAQ: React.FC = () => {
           <li key={idx} onClick={() => toggle(idx)} className={activeIndex === idx ? 'active' : ''}>
             <span>Q. {question}</span>
             <div className="answer">
-              <p>We offer a wide range of travel packages including domestic tours, international getaways, honeymoon packages, group tours, customized holidays, adventure trips, and weekend getaways.</p>
+              <p>{answers[idx]}</p>
             </div>
           </li>
         ))}

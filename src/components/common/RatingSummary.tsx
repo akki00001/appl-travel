@@ -72,12 +72,12 @@ const RatingSummary: React.FC<RatingSummaryProps> = ({
   ];
 
   return (
-    <div style={{ fontFamily: 'sans-serif', maxWidth: '100%', margin: '62px auto', textAlign: 'center', padding: '0 1rem' }}>
+    <div style={{ fontFamily: 'sans-serif', maxWidth: 500, margin: '62px auto', textAlign: 'center' }}>
       <hr style={{ border: 'none', borderTop: '2px solid #ccc', marginBottom: '1rem', width: '60%' }} />
       <h2 style={{ fontWeight: 'bold', fontSize: '1.5rem', marginBottom: '0.5rem' }}>{title}</h2>
       <p style={{ marginBottom: '1rem' }}>Reviews({totalReviews.toLocaleString()})</p>
-      <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap' }}>
-        <div style={{ position: 'relative', width: '120px', height: '130px', flex: '0 0 auto' }}>
+      <div style={{ display: 'flex', gap: '2rem', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ position: 'relative', width: '120px', height: '130px' }}>
           {stars.map((star, i) => (
             <span
               key={star}
