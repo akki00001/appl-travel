@@ -84,20 +84,12 @@ const ItineraryLayout: React.FC<Props> = ({ itinerary, children }) => {
       <div style={{ background: '#fff', padding: '1.5rem', borderBottom: '1px solid #ddd' }}>
         <h1 style={{ fontSize: '1.75rem', fontWeight: 'bold' }}>{itinerary.title}</h1>
         <p style={{ color: 'gray' }}>{itinerary.duration} • {itinerary.locations}</p>
-        <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>
+        <div className="itinerary-tabs">
           {['Itinerary', 'Policies', 'Summary'].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab as typeof activeTab)}
-              style={{
-                background: 'none',
-                border: 'none',
-                paddingBottom: '0.5rem',
-                fontWeight: 600,
-                color: activeTab === tab ? '#007bff' : '#555',
-                borderBottom: activeTab === tab ? '2px solid #007bff' : 'none',
-                cursor: 'pointer',
-              }}
+              className={`itinerary-tab-button ${activeTab === tab ? 'active' : ''}`}
             >
               {tab}
             </button>
@@ -105,8 +97,8 @@ const ItineraryLayout: React.FC<Props> = ({ itinerary, children }) => {
         </div>
       </div>
 
-      <div style={{ display: 'flex', gap: '2rem', padding: '2rem' }}>
-        <div style={{ width: '180px', background: '#fff', padding: '1rem', borderRadius: '0.5rem', height: 'fit-content' }}>
+      <div className="itinerary-container">
+        <div className="itinerary-day-plan">
           <h3 style={{ fontWeight: 'bold', marginBottom: '1rem' }}>Day Plan</h3>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             {itinerary.itinerary.map(({ day, title }) => (
@@ -129,7 +121,7 @@ const ItineraryLayout: React.FC<Props> = ({ itinerary, children }) => {
           </ul>
         </div>
 
-        <div style={{ flex: 2 }}>
+        <div className="itinerary-main-content">
           {activeTab === 'Itinerary' && renderDayCard(selectedDay)}
 
           {activeTab === 'Policies' && (
@@ -151,7 +143,7 @@ const ItineraryLayout: React.FC<Props> = ({ itinerary, children }) => {
           )}
         </div>
 
-        <aside style={{ flex: 1, background: '#fff', padding: '1rem', borderRadius: '0.5rem', height: 'fit-content' }}>
+        <aside className="itinerary-aside">
           <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>₹{finalPrice.toLocaleString()} <span style={{ fontSize: '0.9rem', color: '#777' }}>per adult</span></h3>
           <button
             onClick={handleBookNowClick}
