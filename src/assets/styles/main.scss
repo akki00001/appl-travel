@@ -20,3 +20,13 @@ body {
 @import 'pages/blog';
 @import 'pages/australiapage';
 @import 'pages/faq';
+
+.hide-on-mobile {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}

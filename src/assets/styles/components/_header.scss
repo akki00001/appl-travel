@@ -83,32 +83,59 @@
 @media (max-width: 768px) {
   .header-container {
     .top-bar {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
       padding: 12px 16px;
+      justify-content: center;
 
       .logo {
-        height: 60px;
-        margin-bottom: 12px;
+        height: 55px;
+        margin-bottom: 0;
+        margin-right: 12px;
       }
 
       .search-input {
-        max-width: 100%;
-        margin: 0 0 12px 0;
-        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+        width: auto;
+        flex-grow: 0;
+        padding: 6px 12px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        transition: box-shadow 0.3s ease;
+      }
+
+      .search-input:focus {
+        outline: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        border-color: #f12711;
       }
 
       .connect-btn {
-        width: 100%;
-        padding: 10px 0;
+        width: auto;
+        padding: 8px 16px;
         border-radius: 30px;
-        font-size: 14px;
+        font-size: 12px;
+        background-color: #f12711;
+        transition: background-color 0.3s ease;
+        margin-top: 0;
+        margin-left: 12px;
+      }
+
+      .connect-btn:hover {
+        background-color: #f5af19;
       }
     }
 
     .slider-wrapper {
       padding: 10px 16px;
     }
+  }
+
+  .booking {
+    display: none !important;
   }
 }
 :root {

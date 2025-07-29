@@ -154,11 +154,19 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
       </div>
 
       {/* Icon Slider */}
-      <div className="slider-wrapper">
+      <div className="slider-wrapper" style={{ width: '100%' }}>
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={10}
           slidesPerView={7}
+          breakpoints={{
+            0: {
+              slidesPerView: 3,
+            },
+            769: {
+              slidesPerView: 7,
+            },
+          }}
           loop={true}
           autoplay={{ delay: 2500 }}
           navigation={{
@@ -191,6 +199,7 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
 
       {showConnectPopup && (
         <div
+          className="popup-form-container"
           style={{
             position: 'fixed',
             top: 0,

@@ -66,7 +66,7 @@ const BookingForm: React.FC = () => {
   };
 
   return (
-    <div className="bg-white rounded shadow p-4" style={{ paddingTop: '20px' }}>
+    <div className="hide-on-mobile bg-white rounded shadow p-4" style={{ paddingTop: '20px' }}>
       {/* Tabs */}
       <ul className="nav nav-tabs mb-4">
         {tabs.map((tab) => (
