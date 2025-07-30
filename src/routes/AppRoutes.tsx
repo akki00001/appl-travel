@@ -29,6 +29,8 @@ import JapanPage from '../pages/destinations/Japan';
 import Dashboard from '../pages/Dashboard';
 
 import KeralaPage from '../pages/destinations/kerala';
+import Goa from '../pages/destinations/goa';
+import VietnamPage from '../pages/destinations/vietnam';
 
 import WeAreHiring from '../pages/WeAreHiring';
 import Reviews from '../pages/Reviews';
@@ -77,6 +79,8 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/destination/italy" element={<ItalyPage />} />
       <Route path="/destination/japan" element={<JapanPage />} />
       <Route path="/destination/kerala" element={<KeralaPage />} />
+      <Route path="/destination/goa" element={<Goa />} />
+      <Route path="/destination/vietnam" element={<VietnamPage />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );

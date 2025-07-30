@@ -184,8 +184,8 @@ const destinations: Destination[] = [
 ];
 
 const DestinationListPage: React.FC = () => {
-  const [imageIndices, setImageIndices] = useState<number[]>(
-    Array(destinations.length).fill(0)
+  const [imageIndices, setImageIndices] = useState<number[]>(  
+    Array(destinations.length).fill(0)  
   );
 
   const [popupOpen, setPopupOpen] = useState(false);
@@ -200,6 +200,7 @@ const DestinationListPage: React.FC = () => {
   };
 
   const openPopup = (destinationTitle: string) => {
+    console.log('openPopup called for:', destinationTitle);
     setSelectedDestination(destinationTitle);
     setPopupOpen(true);
   };
@@ -272,7 +273,7 @@ const DestinationListPage: React.FC = () => {
                 </div>
               </div>
 
-              <button className="callback-btn" onClick={() => openPopup(item.title)}>
+              <button className="callback-btn" onClick={() => {console.log('Request Callback button clicked'); openPopup(item.title);}}>
                 <i className="fa fa-phone" />
                 Request Callback
               </button>
