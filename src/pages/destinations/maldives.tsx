@@ -2,49 +2,49 @@ import React from 'react';
 
 const tourCards = [
   {
-    title: 'Classic Sri Lanka Tour',
-    image: '/images/srilanka1.jpg',
-    days: 5,
-    nights: 4,
-    rating: 4.6,
-    ratingCount: 110,
-    locations: ['Colombo', 'Kandy', 'Nuwara Eliya'],
+    title: 'Classic Maldives Tour',
+    image: '/images/maldives1.jpg',
+    days: 4,
+    nights: 3,
+    rating: 4.7,
+    ratingCount: 120,
+    locations: ['Malé', 'Maafushi', 'Thulusdhoo'],
     extraLocationsCount: 0,
-    originalPrice: 40000,
-    discountAmount: 8000,
-    pricePerAdult: 32000,
+    originalPrice: 35000,
+    discountAmount: 7000,
+    pricePerAdult: 28000,
   },
   {
-    title: 'Sri Lanka Cultural Escape',
-    image: '/images/srilanka2.jpg',
-    days: 7,
-    nights: 6,
-    rating: 4.8,
-    ratingCount: 90,
-    locations: ['Anuradhapura', 'Sigiriya', 'Polonnaruwa'],
-    extraLocationsCount: 0,
-    originalPrice: 60000,
-    discountAmount: 12000,
-    pricePerAdult: 48000,
-  },
-  {
-    title: 'Sri Lanka Adventure & Beaches',
-    image: '/images/srilanka3.jpg',
+    title: 'Maldives Luxury Escape',
+    image: '/images/maldives2.jpg',
     days: 6,
     nights: 5,
-    rating: 4.7,
+    rating: 4.9,
     ratingCount: 85,
-    locations: ['Mirissa', 'Ella', 'Galle'],
+    locations: ['Malé', 'Baa Atoll', 'Dhigurah'],
+    extraLocationsCount: 0,
+    originalPrice: 75000,
+    discountAmount: 15000,
+    pricePerAdult: 60000,
+  },
+  {
+    title: 'Maldives Adventure & Relaxation',
+    image: '/images/maldives3.jpg',
+    days: 5,
+    nights: 4,
+    rating: 4.8,
+    ratingCount: 95,
+    locations: ['Malé', 'Hulhumalé', 'Fulidhoo'],
     extraLocationsCount: 1,
-    originalPrice: 55000,
-    discountAmount: 11000,
-    pricePerAdult: 44000,
+    originalPrice: 50000,
+    discountAmount: 10000,
+    pricePerAdult: 40000,
   },
 ];
 
-const SriLanka: React.FC = () => {
+const Maldives: React.FC = () => {
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#fff3e0' }}>
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#fffff' }}>
       {/* Hero Section */}
       <div
         style={{
@@ -53,7 +53,7 @@ const SriLanka: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/srilanka-hero.jpg)',
+          backgroundImage: 'url(/images/maldives-hero.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
@@ -73,14 +73,14 @@ const SriLanka: React.FC = () => {
           }}
         >
           <h1 style={{ fontSize: '2.8rem', fontWeight: 700, margin: 0 }}>
-            Discover Sri Lanka
+            Discover the Maldives
           </h1>
           <p style={{ fontSize: '1.3rem', margin: '1.2rem 0 2rem', fontWeight: 400 }}>
-            Explore the diverse landscapes of Sri Lanka, from ancient temples to pristine beaches and lush tea plantations.
+            Experience the breathtaking beauty of the Maldives with its crystal-clear waters, white sandy beaches, and vibrant marine life.
           </p>
           <button
             style={{
-              background: '#f57c00',
+              background: '#00796b',
               color: '#fff',
               border: 'none',
               borderRadius: '32px',
@@ -91,34 +91,34 @@ const SriLanka: React.FC = () => {
               boxShadow: '0 2px 12px rgba(0,0,0,0.14)',
               transition: 'background 0.2s',
             }}
-            onMouseOver={e => (e.currentTarget.style.background = '#bb4d00')}
-            onMouseOut={e => (e.currentTarget.style.background = '#f57c00')}
+            onMouseOver={e => (e.currentTarget.style.background = '#004d40')}
+            onMouseOut={e => (e.currentTarget.style.background = '#00796b')}
           >
-            Start Your Sri Lanka Adventure
+            Start Your Maldives Adventure
           </button>
         </div>
       </div>
 
       <div style={{ textAlign: 'left', marginLeft: '5%', marginRight: '5%', padding: 0 }}>
-        <h1 style={{ color: '#f57c00', fontWeight: 'bold', marginTop: '2rem', marginBottom: '2rem', padding: 0 }}>
-          Explore Sri Lanka
+        <h1 style={{ color: '#00796b', fontWeight: 'bold', marginTop: '2rem', marginBottom: '2rem', padding: 0 }}>
+          Explore the Maldives
         </h1>
         <hr style={{ margin: '2rem 0', padding: 0 }} />
         <p>
-          Sri Lanka offers a rich cultural heritage, stunning natural beauty, and warm hospitality. Discover ancient ruins, vibrant wildlife, and beautiful beaches.
+          The Maldives is a tropical paradise known for its stunning coral reefs, luxurious resorts, and vibrant culture. Whether you seek relaxation or adventure, the Maldives offers something for every traveler.
         </p>
         <p>
-          Enjoy world-class hiking, wildlife safaris, and delicious local cuisine during your unforgettable journey.
+          Discover world-class snorkeling, diving, and water sports, or simply unwind on pristine beaches with breathtaking sunsets.
         </p>
-        <h2 style={{ color: '#f57c00', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
+        <h2 style={{ color: '#00796b', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
           Highlights to Inspire Your Journey
         </h2>
         <ul>
-          <li>Iconic Landmarks: Sigiriya Rock Fortress, Temple of the Tooth, Galle Fort</li>
-          <li>Nature & Wildlife: Yala National Park, Horton Plains, Udawalawe Elephant Sanctuary</li>
-          <li>Cultural Experiences: Traditional dance, local markets, tea plantation tours</li>
-          <li>Adventure Activities: Hiking, surfing, whale watching, cycling</li>
-          <li>Gastronomic Delights: Sri Lankan rice and curry, hoppers, seafood specialties</li>
+          <li>Iconic Landmarks: Malé, Baa Atoll, Sun Island</li>
+          <li>Nature & Wildlife: Coral reefs, manta rays, whale sharks</li>
+          <li>Cultural Experiences: Local island visits, traditional music and dance</li>
+          <li>Adventure Activities: Scuba diving, snorkeling, surfing, fishing</li>
+          <li>Gastronomic Delights: Fresh seafood, Maldivian curries, tropical fruits</li>
         </ul>
       </div>
 
@@ -233,5 +233,4 @@ const SriLanka: React.FC = () => {
   );
 };
 
-export default SriLanka;
-// </edit_file>
+export default Maldives;

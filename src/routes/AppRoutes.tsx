@@ -18,7 +18,9 @@ import SwitzerlandItineraryPage from '../pages/itineraries/SwitzerlandItineraryP
 import ThailandItineraryPage from '../pages/itineraries/ThailandItineraryPage';
 import KashmirItineraryPage from '../pages/itineraries/KashmirItineraryPage';
 import MaldivesItineraryPage from '../pages/itineraries/MaldivesItineraryPage';
+import Maldives from '../pages/destinations/maldives';
 import HimachalItineraryPage from '../pages/itineraries/HimachalItineraryPage';
+import HimachalPage from '../pages/destinations/himachal';
 import DubaiItineraryPage from '../pages/itineraries/DubaiItineraryPage';
 import CanadaPage from '../pages/destinations/CanadaPage';
 import ThailandPage from '../pages/destinations/ThailandThailand';
@@ -31,6 +33,8 @@ import Dashboard from '../pages/Dashboard';
 import KeralaPage from '../pages/destinations/kerala';
 import Goa from '../pages/destinations/goa';
 import VietnamPage from '../pages/destinations/vietnam';
+import JammuPage from '../pages/destinations/jammu';
+import SriLanka from '../pages/destinations/SriLanka';
 
 import WeAreHiring from '../pages/WeAreHiring';
 import Reviews from '../pages/Reviews';
@@ -71,8 +75,8 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/destination/thailand" element={<ThailandPage />} />
       <Route path="/destination/thailand-itinerary" element={<ThailandItineraryPage />} />
       <Route path="/destination/kashmir" element={<KashmirItineraryPage />} />
-      <Route path="/destination/maldives" element={<MaldivesItineraryPage />} />
-      <Route path="/destination/himachal" element={<HimachalItineraryPage />} />
+      <Route path="/destination/maldives" element={<Maldives />} />
+      <Route path="/destination/himachal" element={<HimachalPage />} />
       <Route path="/destination/dubai" element={<DubaiPage />} />
       <Route path="/destination/dubai/itinerary" element={<DubaiItineraryPage />} />
       <Route path="/destination/canada" element={<CanadaPage />} />
@@ -81,6 +85,8 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/destination/kerala" element={<KeralaPage />} />
       <Route path="/destination/goa" element={<Goa />} />
       <Route path="/destination/vietnam" element={<VietnamPage />} />
+      <Route path="/destination/jammu-and-kashmir" element={<JammuPage />} />
+      <Route path="/destination/srilanka" element={<SriLanka />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );

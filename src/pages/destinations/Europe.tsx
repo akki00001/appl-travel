@@ -2,49 +2,49 @@ import React from 'react';
 
 const tourCards = [
   {
-    title: 'Classic Sri Lanka Tour',
-    image: '/images/srilanka1.jpg',
-    days: 5,
-    nights: 4,
-    rating: 4.6,
-    ratingCount: 110,
-    locations: ['Colombo', 'Kandy', 'Nuwara Eliya'],
-    extraLocationsCount: 0,
-    originalPrice: 40000,
-    discountAmount: 8000,
-    pricePerAdult: 32000,
-  },
-  {
-    title: 'Sri Lanka Cultural Escape',
-    image: '/images/srilanka2.jpg',
-    days: 7,
-    nights: 6,
+    title: 'Classic Europe Tour',
+    image: '/images/europe1.jpg',
+    days: 10,
+    nights: 9,
     rating: 4.8,
-    ratingCount: 90,
-    locations: ['Anuradhapura', 'Sigiriya', 'Polonnaruwa'],
-    extraLocationsCount: 0,
-    originalPrice: 60000,
-    discountAmount: 12000,
-    pricePerAdult: 48000,
+    ratingCount: 120,
+    locations: ['Paris', 'Rome', 'Venice'],
+    extraLocationsCount: 2,
+    originalPrice: 120000,
+    discountAmount: 24000,
+    pricePerAdult: 96000,
   },
   {
-    title: 'Sri Lanka Adventure & Beaches',
-    image: '/images/srilanka3.jpg',
-    days: 6,
-    nights: 5,
-    rating: 4.7,
-    ratingCount: 85,
-    locations: ['Mirissa', 'Ella', 'Galle'],
+    title: 'Europe Cultural Escape',
+    image: '/images/europe2.jpg',
+    days: 12,
+    nights: 11,
+    rating: 4.9,
+    ratingCount: 95,
+    locations: ['Barcelona', 'Amsterdam', 'Prague'],
     extraLocationsCount: 1,
-    originalPrice: 55000,
-    discountAmount: 11000,
-    pricePerAdult: 44000,
+    originalPrice: 140000,
+    discountAmount: 28000,
+    pricePerAdult: 112000,
+  },
+  {
+    title: 'Europe Adventure & Scenic',
+    image: '/images/europe3.jpg',
+    days: 14,
+    nights: 13,
+    rating: 4.7,
+    ratingCount: 80,
+    locations: ['Swiss Alps', 'Lake Como', 'Budapest'],
+    extraLocationsCount: 0,
+    originalPrice: 160000,
+    discountAmount: 32000,
+    pricePerAdult: 128000,
   },
 ];
 
-const SriLanka: React.FC = () => {
+const Europe: React.FC = () => {
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#fff3e0' }}>
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#e8f0fe' }}>
       {/* Hero Section */}
       <div
         style={{
@@ -53,7 +53,7 @@ const SriLanka: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/srilanka-hero.jpg)',
+          backgroundImage: 'url(/images/europe-hero.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
@@ -73,14 +73,14 @@ const SriLanka: React.FC = () => {
           }}
         >
           <h1 style={{ fontSize: '2.8rem', fontWeight: 700, margin: 0 }}>
-            Discover Sri Lanka
+            Discover Europe
           </h1>
           <p style={{ fontSize: '1.3rem', margin: '1.2rem 0 2rem', fontWeight: 400 }}>
-            Explore the diverse landscapes of Sri Lanka, from ancient temples to pristine beaches and lush tea plantations.
+            Explore the rich history, stunning architecture, and vibrant cultures of Europe’s top destinations.
           </p>
           <button
             style={{
-              background: '#f57c00',
+              background: '#1a73e8',
               color: '#fff',
               border: 'none',
               borderRadius: '32px',
@@ -91,34 +91,34 @@ const SriLanka: React.FC = () => {
               boxShadow: '0 2px 12px rgba(0,0,0,0.14)',
               transition: 'background 0.2s',
             }}
-            onMouseOver={e => (e.currentTarget.style.background = '#bb4d00')}
-            onMouseOut={e => (e.currentTarget.style.background = '#f57c00')}
+            onMouseOver={e => (e.currentTarget.style.background = '#0c47b7')}
+            onMouseOut={e => (e.currentTarget.style.background = '#1a73e8')}
           >
-            Start Your Sri Lanka Adventure
+            Start Your Europe Adventure
           </button>
         </div>
       </div>
 
       <div style={{ textAlign: 'left', marginLeft: '5%', marginRight: '5%', padding: 0 }}>
-        <h1 style={{ color: '#f57c00', fontWeight: 'bold', marginTop: '2rem', marginBottom: '2rem', padding: 0 }}>
-          Explore Sri Lanka
+        <h1 style={{ color: '#1a73e8', fontWeight: 'bold', marginTop: '2rem', marginBottom: '2rem', padding: 0 }}>
+          Explore Europe
         </h1>
         <hr style={{ margin: '2rem 0', padding: 0 }} />
         <p>
-          Sri Lanka offers a rich cultural heritage, stunning natural beauty, and warm hospitality. Discover ancient ruins, vibrant wildlife, and beautiful beaches.
+          Europe offers a diverse blend of history, culture, and natural beauty. Discover iconic landmarks, world-class museums, and charming towns.
         </p>
         <p>
-          Enjoy world-class hiking, wildlife safaris, and delicious local cuisine during your unforgettable journey.
+          Enjoy culinary delights, scenic landscapes, and vibrant festivals during your unforgettable journey.
         </p>
-        <h2 style={{ color: '#f57c00', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
+        <h2 style={{ color: '#1a73e8', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
           Highlights to Inspire Your Journey
         </h2>
         <ul>
-          <li>Iconic Landmarks: Sigiriya Rock Fortress, Temple of the Tooth, Galle Fort</li>
-          <li>Nature & Wildlife: Yala National Park, Horton Plains, Udawalawe Elephant Sanctuary</li>
-          <li>Cultural Experiences: Traditional dance, local markets, tea plantation tours</li>
-          <li>Adventure Activities: Hiking, surfing, whale watching, cycling</li>
-          <li>Gastronomic Delights: Sri Lankan rice and curry, hoppers, seafood specialties</li>
+          <li>Iconic Landmarks: Eiffel Tower, Colosseum, Sagrada Familia</li>
+          <li>Nature & Wildlife: Swiss Alps, Mediterranean Coast, Black Forest</li>
+          <li>Cultural Experiences: Art galleries, historic sites, local markets</li>
+          <li>Adventure Activities: Hiking, cycling, river cruises</li>
+          <li>Gastronomic Delights: French cuisine, Italian pasta, Spanish tapas</li>
         </ul>
       </div>
 
@@ -209,7 +209,7 @@ const SriLanka: React.FC = () => {
               </p>
               <button
                 style={{
-                  backgroundColor: '#f97316',
+                  backgroundColor: '#1a73e8',
                   color: 'white',
                   border: 'none',
                   borderRadius: '6px',
@@ -233,5 +233,4 @@ const SriLanka: React.FC = () => {
   );
 };
 
-export default SriLanka;
-// </edit_file>
+export default Europe;

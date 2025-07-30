@@ -38,6 +38,26 @@ const Navbar: React.FC = () => {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink to="/destination/vietnam" className="nav-link">
+                Vietnam
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/destination/himachal" className="nav-link">
+                Himachal
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/destination/jammu" className="nav-link">
+                J &amp; K
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/destination/srilanka" className="nav-link">
+                Sri Lanka
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink to="/hotel" className="nav-link">
                 Hotel
               </NavLink>

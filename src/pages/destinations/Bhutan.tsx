@@ -2,49 +2,49 @@ import React from 'react';
 
 const tourCards = [
   {
-    title: 'Classic Sri Lanka Tour',
-    image: '/images/srilanka1.jpg',
-    days: 5,
-    nights: 4,
-    rating: 4.6,
-    ratingCount: 110,
-    locations: ['Colombo', 'Kandy', 'Nuwara Eliya'],
-    extraLocationsCount: 0,
-    originalPrice: 40000,
-    discountAmount: 8000,
-    pricePerAdult: 32000,
-  },
-  {
-    title: 'Sri Lanka Cultural Escape',
-    image: '/images/srilanka2.jpg',
-    days: 7,
-    nights: 6,
-    rating: 4.8,
-    ratingCount: 90,
-    locations: ['Anuradhapura', 'Sigiriya', 'Polonnaruwa'],
-    extraLocationsCount: 0,
-    originalPrice: 60000,
-    discountAmount: 12000,
-    pricePerAdult: 48000,
-  },
-  {
-    title: 'Sri Lanka Adventure & Beaches',
-    image: '/images/srilanka3.jpg',
+    title: 'Bhutan Cultural Heritage Tour',
+    image: '/images/bhutan1.jpg',
     days: 6,
     nights: 5,
-    rating: 4.7,
-    ratingCount: 85,
-    locations: ['Mirissa', 'Ella', 'Galle'],
+    rating: 4.9,
+    ratingCount: 75,
+    locations: ['Thimphu', 'Punakha', 'Paro'],
     extraLocationsCount: 1,
-    originalPrice: 55000,
-    discountAmount: 11000,
-    pricePerAdult: 44000,
+    originalPrice: 70000,
+    discountAmount: 14000,
+    pricePerAdult: 56000,
+  },
+  {
+    title: 'Bhutan Nature & Adventure',
+    image: '/images/bhutan2.jpg',
+    days: 8,
+    nights: 7,
+    rating: 4.8,
+    ratingCount: 60,
+    locations: ['Phobjikha Valley', 'Bumthang', 'Tiger’s Nest'],
+    extraLocationsCount: 0,
+    originalPrice: 85000,
+    discountAmount: 17000,
+    pricePerAdult: 68000,
+  },
+  {
+    title: 'Bhutan Spiritual Journey',
+    image: '/images/bhutan3.jpg',
+    days: 7,
+    nights: 6,
+    rating: 4.7,
+    ratingCount: 50,
+    locations: ['Thimphu', 'Dochula Pass', 'Gangtey Monastery'],
+    extraLocationsCount: 0,
+    originalPrice: 80000,
+    discountAmount: 16000,
+    pricePerAdult: 64000,
   },
 ];
 
-const SriLanka: React.FC = () => {
+const Bhutan: React.FC = () => {
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#fff3e0' }}>
+    <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#e0f7fa' }}>
       {/* Hero Section */}
       <div
         style={{
@@ -53,7 +53,7 @@ const SriLanka: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/srilanka-hero.jpg)',
+          backgroundImage: 'url(/images/bhutan-hero.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
@@ -73,14 +73,14 @@ const SriLanka: React.FC = () => {
           }}
         >
           <h1 style={{ fontSize: '2.8rem', fontWeight: 700, margin: 0 }}>
-            Discover Sri Lanka
+            Discover Bhutan
           </h1>
           <p style={{ fontSize: '1.3rem', margin: '1.2rem 0 2rem', fontWeight: 400 }}>
-            Explore the diverse landscapes of Sri Lanka, from ancient temples to pristine beaches and lush tea plantations.
+            Explore the serene landscapes of Bhutan, from majestic monasteries to breathtaking valleys and vibrant culture.
           </p>
           <button
             style={{
-              background: '#f57c00',
+              background: '#00796b',
               color: '#fff',
               border: 'none',
               borderRadius: '32px',
@@ -91,34 +91,34 @@ const SriLanka: React.FC = () => {
               boxShadow: '0 2px 12px rgba(0,0,0,0.14)',
               transition: 'background 0.2s',
             }}
-            onMouseOver={e => (e.currentTarget.style.background = '#bb4d00')}
-            onMouseOut={e => (e.currentTarget.style.background = '#f57c00')}
+            onMouseOver={e => (e.currentTarget.style.background = '#004d40')}
+            onMouseOut={e => (e.currentTarget.style.background = '#00796b')}
           >
-            Start Your Sri Lanka Adventure
+            Start Your Bhutan Adventure
           </button>
         </div>
       </div>
 
       <div style={{ textAlign: 'left', marginLeft: '5%', marginRight: '5%', padding: 0 }}>
-        <h1 style={{ color: '#f57c00', fontWeight: 'bold', marginTop: '2rem', marginBottom: '2rem', padding: 0 }}>
-          Explore Sri Lanka
+        <h1 style={{ color: '#00796b', fontWeight: 'bold', marginTop: '2rem', marginBottom: '2rem', padding: 0 }}>
+          Explore Bhutan
         </h1>
         <hr style={{ margin: '2rem 0', padding: 0 }} />
         <p>
-          Sri Lanka offers a rich cultural heritage, stunning natural beauty, and warm hospitality. Discover ancient ruins, vibrant wildlife, and beautiful beaches.
+          Bhutan offers a unique blend of natural beauty, spiritual heritage, and warm hospitality. Discover ancient fortresses, pristine valleys, and vibrant festivals.
         </p>
         <p>
-          Enjoy world-class hiking, wildlife safaris, and delicious local cuisine during your unforgettable journey.
+          Enjoy hiking, cultural tours, and experiencing the peaceful way of life in the Land of the Thunder Dragon.
         </p>
-        <h2 style={{ color: '#f57c00', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
+        <h2 style={{ color: '#00796b', fontWeight: 'bold', marginTop: '2rem', marginBottom: '1rem' }}>
           Highlights to Inspire Your Journey
         </h2>
         <ul>
-          <li>Iconic Landmarks: Sigiriya Rock Fortress, Temple of the Tooth, Galle Fort</li>
-          <li>Nature & Wildlife: Yala National Park, Horton Plains, Udawalawe Elephant Sanctuary</li>
-          <li>Cultural Experiences: Traditional dance, local markets, tea plantation tours</li>
-          <li>Adventure Activities: Hiking, surfing, whale watching, cycling</li>
-          <li>Gastronomic Delights: Sri Lankan rice and curry, hoppers, seafood specialties</li>
+          <li>Iconic Landmarks: Tiger’s Nest Monastery, Punakha Dzong, Dochula Pass</li>
+          <li>Nature & Wildlife: Phobjikha Valley, Royal Manas National Park</li>
+          <li>Cultural Experiences: Traditional festivals, local crafts, Bhutanese cuisine</li>
+          <li>Adventure Activities: Trekking, river rafting, bird watching</li>
+          <li>Spiritual Retreats: Meditation centers, Buddhist monasteries</li>
         </ul>
       </div>
 
@@ -209,7 +209,7 @@ const SriLanka: React.FC = () => {
               </p>
               <button
                 style={{
-                  backgroundColor: '#f97316',
+                  backgroundColor: '#00796b',
                   color: 'white',
                   border: 'none',
                   borderRadius: '6px',
@@ -233,5 +233,4 @@ const SriLanka: React.FC = () => {
   );
 };
 
-export default SriLanka;
-// </edit_file>
+export default Bhutan;
