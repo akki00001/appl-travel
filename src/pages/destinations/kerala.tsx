@@ -3,7 +3,7 @@ import React from 'react';
 const tourCards = [
   {
     title: 'Classic Kerala Tour With FREE Visit To Tea Estate',
-    image: '/images/pexels-bharatanirudh-32805562.jpg',
+    image: '/images/kerala/01.jpg',
     days: 3,
     nights: 2,
     rating: 4.5,
@@ -16,7 +16,7 @@ const tourCards = [
   },
   {
     title: 'Glimpse Of Kerala | Waterfalls, Wildlife And Winding Roads',
-    image: '/images/s1180x560.webp',
+    image: '../images/kerala/05.jpg',
     days: 4,
     nights: 3,
     rating: 4.5,
@@ -29,7 +29,7 @@ const tourCards = [
   },
   {
     title: 'Kerala Scenic Trio | Munnar, Thekkady, And Kumarakom',
-    image: '/images/pexels-gorky-30778230.jpg',
+    image: '../images/kerala/03.jpg',
     days: 5,
     nights: 4,
     rating: 5.0,
@@ -53,7 +53,7 @@ const KeralaPage: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/tailormade-and-group-tour-india-highlight-kerala-5.webp)',
+          backgroundImage: 'url(../images/kerala/04.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',

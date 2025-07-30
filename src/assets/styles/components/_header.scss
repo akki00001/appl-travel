@@ -84,7 +84,7 @@
   .header-container {
     .top-bar {
       flex-direction: row;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       align-items: center;
       padding: 12px 16px;
       justify-content: center;
@@ -96,7 +96,7 @@
       }
 
       .search-input {
-        max-width: 90%;
+        max-width: 80%;
         margin: 0 auto;
         width: auto;
         flex-grow: 0;
@@ -120,8 +120,8 @@
         font-size: 12px;
         background-color: #f12711;
         transition: background-color 0.3s ease;
-        margin-top: 0;
-        margin-left: 12px;
+        margin-top: 8px;
+        margin-left: 0;
       }
 
       .connect-btn:hover {

@@ -14,9 +14,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Shimla & Manali Escape',
     images: [
-      '/images/himachal1-1.jpg',
-      '/images/himachal1-2.jpg',
-      '/images/himachal1-3.jpg',
+      '/images/himachal/01.jpg',
+      '/images/himachal/02.jpg',
+      '/images/himachal/03.jpg',
     ],
     daysRange: '4-10 days',
     priceRange: '₹11,500 to ₹25,000',
@@ -27,9 +27,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Spiti Valley Adventure',
     images: [
-      '/images/himachal2-1.jpg',
-      '/images/himachal2-2.jpg',
-      '/images/himachal2-3.jpg',
+      '/images/himachal/03.jpg',
+      '/images/himachal/02.jpg',
+      '/images/himachal/01.jpg',
     ],
     daysRange: '4-10 days',
     priceRange: '₹11,500 to ₹25,000',
@@ -40,9 +40,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Kullu Valley Getaway',
     images: [
-      '/images/himachal3-1.jpg',
-      '/images/himachal3-2.jpg',
-      '/images/himachal3-3.jpg',
+      '/images/himachal/02.jpg',
+      '/images/himachal/03.jpg',
+      '/images/himachal/04.jpg',
     ],
     daysRange: '4-10 days',
     priceRange: '₹11,500 to ₹25,000',
@@ -63,7 +63,7 @@ const HimachalPage: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/himachal-hero.jpg)',
+          backgroundImage: 'url(/images/himachal/05.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',

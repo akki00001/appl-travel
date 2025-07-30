@@ -3,7 +3,7 @@ import React from 'react';
 const tourCards = [
   {
     title: 'Classic Europe Tour',
-    image: '/images/europe1.jpg',
+    image: '/images/europe/02.jpg',
     days: 10,
     nights: 9,
     rating: 4.8,
@@ -16,7 +16,7 @@ const tourCards = [
   },
   {
     title: 'Europe Cultural Escape',
-    image: '/images/europe2.jpg',
+    image: '/images/europe/03.jpg',
     days: 12,
     nights: 11,
     rating: 4.9,
@@ -29,7 +29,7 @@ const tourCards = [
   },
   {
     title: 'Europe Adventure & Scenic',
-    image: '/images/europe3.jpg',
+    image: '/images/europe/04.jpg',
     days: 14,
     nights: 13,
     rating: 4.7,
@@ -53,7 +53,7 @@ const Europe: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/europe-hero.jpg)',
+          backgroundImage: 'url(/images/europe/01.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',

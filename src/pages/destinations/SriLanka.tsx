@@ -3,7 +3,7 @@ import React from 'react';
 const tourCards = [
   {
     title: 'Classic Sri Lanka Tour',
-    image: '/images/srilanka1.jpg',
+    image: '/images/srilanka/01.jpg',
     days: 5,
     nights: 4,
     rating: 4.6,
@@ -16,7 +16,7 @@ const tourCards = [
   },
   {
     title: 'Sri Lanka Cultural Escape',
-    image: '/images/srilanka2.jpg',
+    image: '/images/srilanka/02.jpg',
     days: 7,
     nights: 6,
     rating: 4.8,
@@ -29,7 +29,7 @@ const tourCards = [
   },
   {
     title: 'Sri Lanka Adventure & Beaches',
-    image: '/images/srilanka3.jpg',
+    image: '/images/srilanka/03.jpg',
     days: 6,
     nights: 5,
     rating: 4.7,
@@ -53,7 +53,7 @@ const SriLanka: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/srilanka-hero.jpg)',
+          backgroundImage: 'url(/images/srilanka/04.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',

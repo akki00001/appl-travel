@@ -14,9 +14,9 @@ const tourCards: TourCard[] = [
   {
     title: 'North Goa Fun',
     images: [
-      '/images/pexels-ajay-donga-1113836-2174660.jpg',
-      '/images/pexels-cottonbro-4429309.jpg',
-      '/images/pexels-jishnu-viswanath-245699150-12377224.jpg',
+      '/images/goa/01.jpg',
+      '/images/goa/02.jpg',
+      '/images/goa/03.jpg',
     ],
     daysRange: '2-6 days',
     priceRange: '₹7,000 to ₹20,000',
@@ -36,9 +36,9 @@ const tourCards: TourCard[] = [
   {
     title: 'South Goa & Nature',
     images: [
-      '/images/pexels-cottonbro-4429309.jpg',
-      '/images/pexels-jishnu-viswanath-245699150-12377224.jpg',
-      '/images/pexels-ajay-donga-1113836-2174660.jpg',
+      '/images/goa/03.jpg',
+      '/images/goa/01.jpg',
+      '/images/goa/02.jpg',
     ],
     daysRange: '2-6 days',
     priceRange: '₹7,000 to ₹20,000',
@@ -57,9 +57,9 @@ const tourCards: TourCard[] = [
   {
     title: 'Relaxed Beach Retreat',
     images: [
-      '/images/pexels-jishnu-viswanath-245699150-12377224.jpg',
-      '/images/pexels-ajay-donga-1113836-2174660.jpg',
-      '/images/pexels-cottonbro-4429309.jpg',
+      '/images/goa/02.jpg',
+      '/images/goa/01.jpg',
+      '/images/goa/03.jpg',
     ],
     daysRange: '2-6 days',
     priceRange: '₹7,000 to ₹20,000',
@@ -88,7 +88,7 @@ const Goa: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/pexels-mihir-thakar-2123686-3754547.jpg)',
+          backgroundImage: 'url(/images/goa/06.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',

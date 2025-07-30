@@ -3,7 +3,7 @@ import React from 'react';
 const tourCards = [
   {
     title: 'Uncover Kashmir | Journey To Nature Paradise',
-    image: '/images/pexels-aashish-bhardwaj-257084-786946.jpg',
+    image: '/images/kashmir/01.jpg',
     days: 4,
     nights: 3,
     rating: 4.5,
@@ -16,7 +16,7 @@ const tourCards = [
   },
   {
     title: 'Experience The Luxury Of Kashmir | FREE Excursion To Aru Valley',
-    image: '/images/pexels-vikas-lone-825341464-32935509.jpg',
+    image: '/images/kashmir/02.jpg',
     days: 5,
     nights: 4,
     rating: 4.9,
@@ -29,7 +29,7 @@ const tourCards = [
   },
   {
     title: 'Highlights Of Kashmir | FREE Shikara Ride On Dal Lake',
-    image: '/images/pexels-wanderinglenses-15196861.jpg',
+    image: '/images/kashmir/03.jpg',
     days: 6,
     nights: 5,
     rating: 4.4,
@@ -53,7 +53,7 @@ const jammu: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/pexels-amjed-wani-1355393378-26110235.jpg)',
+          backgroundImage: 'url(/images/kashmir/04.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',

@@ -1,5 +1,7 @@
 .destination-list {
   padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 
   .card-grid {
     display: grid;
@@ -65,144 +67,157 @@
       }
     }
 
-      .content {
-        padding: 1rem;
+    .content {
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .content-main {
+        flex-grow: 1;
+      }
+
+      .top-row {
         display: flex;
-        flex-direction: column;
-        height: 100%;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        color: #555;
 
-        .content-main {
-          flex-grow: 1;
-        }
-
-        .top-row {
-          display: flex;
-          justify-content: space-between;
-          font-size: 0.9rem;
-          margin-bottom: 0.5rem;
-          color: #555;
-
-          .rating {
-            color: #28a745;
-            font-weight: 600;
-
-            i {
-              margin-right: 4px;
-            }
-
-            .count {
-              font-weight: normal;
-              color: #666;
-            }
-          }
-        }
-
-        h3 {
-          font-size: 1.2rem;
-          font-weight: 700;
-          color: #222;
-          margin-bottom: 0.5rem;
-          text-decoration: none;
-        }
-
-        .locations {
-          font-size: 0.95rem;
+        .rating {
+          color: #28a745;
           font-weight: 600;
-          color: #444;
-          margin-bottom: 0.5rem;
-
-          b {
-            color: #d9534f;
-          }
-
-          .sep {
-            margin: 0 6px;
-            color: #999;
-          }
-
-          .overflow {
-            margin-left: 8px;
-            background: #f0ad4e;
-            color: #fff;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.8rem;
-          }
-        }
-
-        .monsoon-badge {
-          background: linear-gradient(90deg, #00c6ff, #0072ff);
-          color: white;
-          font-weight: 700;
-          padding: 6px 12px;
-          border-radius: 20px;
-          width: fit-content;
-          margin-bottom: 0.75rem;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-          text-transform: uppercase;
-          font-size: 0.75rem;
-        }
-
-        .pricing {
-          display: flex;
-          gap: 1rem;
-          align-items: center;
-          margin-bottom: 0.5rem;
-
-          .strike {
-            text-decoration: line-through;
-            color: #888;
-            font-weight: 600;
-          }
-
-          .discount {
-            background-color: #28a745;
-            color: white;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 12px;
-            text-transform: uppercase;
-            font-size: 0.75rem;
-          }
-        }
-
-        .final-price {
-          font-size: 1.5rem;
-          font-weight: 800;
-          color: #d9534f;
-
-          span {
-            font-size: 1rem;
-            font-weight: 500;
-            color: #666;
-            margin-left: 4px;
-          }
-        }
-
-        .callback-btn {
-          margin-top: 1rem;
-          width: 100%;
-          background-color: #f57224;
-          color: white;
-          padding: 12px;
-          border: none;
-          border-radius: 6px;
-          font-weight: 700;
-          font-size: 1rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          gap: 8px;
-          transition: background-color 0.3s ease;
 
           i {
-            font-size: 1.2rem;
+            margin-right: 4px;
           }
 
-          &:hover {
-            background-color: #e0550d;
+          .count {
+            font-weight: normal;
+            color: #666;
           }
         }
       }
+
+      h3 {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 0.5rem;
+        text-decoration: none;
+      }
+
+      .locations {
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #444;
+        margin-bottom: 0.5rem;
+
+        b {
+          color: #d9534f;
+        }
+
+        .sep {
+          margin: 0 6px;
+          color: #999;
+        }
+
+        .overflow {
+          margin-left: 8px;
+          background: #f0ad4e;
+          color: #fff;
+          padding: 2px 8px;
+          border-radius: 12px;
+          font-size: 0.8rem;
+        }
+      }
+
+      .monsoon-badge {
+        background: linear-gradient(90deg, #00c6ff, #0072ff);
+        color: white;
+        font-weight: 700;
+        padding: 6px 12px;
+        border-radius: 20px;
+        width: fit-content;
+        margin-bottom: 0.75rem;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        text-transform: uppercase;
+        font-size: 0.75rem;
+      }
+
+      .pricing {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        .strike {
+          text-decoration: line-through;
+          color: #888;
+          font-weight: 600;
+        }
+
+        .discount {
+          background-color: #28a745;
+          color: white;
+          font-weight: 700;
+          padding: 4px 10px;
+          border-radius: 12px;
+          text-transform: uppercase;
+          font-size: 0.75rem;
+        }
+      }
+
+      .final-price {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #d9534f;
+
+        span {
+          font-size: 1rem;
+          font-weight: 500;
+          color: #666;
+          margin-left: 4px;
+        }
+      }
+
+      .callback-btn {
+        margin-top: 1rem;
+        width: 100%;
+        background-color: #f57224;
+        color: white;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        font-weight: 700;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        transition: background-color 0.3s ease;
+
+        i {
+          font-size: 1.2rem;
+        }
+
+        &:hover {
+          background-color: #e0550d;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .destination-list {
+    padding: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+
+    .card-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
   }
 }

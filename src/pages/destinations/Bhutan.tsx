@@ -3,7 +3,7 @@ import React from 'react';
 const tourCards = [
   {
     title: 'Bhutan Cultural Heritage Tour',
-    image: '/images/bhutan1.jpg',
+    image: '../../images/bhutan/01.jpg',
     days: 6,
     nights: 5,
     rating: 4.9,
@@ -16,7 +16,7 @@ const tourCards = [
   },
   {
     title: 'Bhutan Nature & Adventure',
-    image: '/images/bhutan2.jpg',
+    image: '../../images/bhutan/02.jpg',
     days: 8,
     nights: 7,
     rating: 4.8,
@@ -29,7 +29,7 @@ const tourCards = [
   },
   {
     title: 'Bhutan Spiritual Journey',
-    image: '/images/bhutan3.jpg',
+    image: '../../images/bhutan/03.jpg',
     days: 7,
     nights: 6,
     rating: 4.7,
@@ -53,7 +53,7 @@ const Bhutan: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/bhutan-hero.jpg)',
+          backgroundImage: 'url( ../../images/bhutan/05.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',

@@ -3,7 +3,7 @@ import React from 'react';
 const tourCards = [
   {
     title: 'Classic Maldives Tour',
-    image: '/images/maldives1.jpg',
+    image: '/images/maldives/01.jpg',
     days: 4,
     nights: 3,
     rating: 4.7,
@@ -16,7 +16,7 @@ const tourCards = [
   },
   {
     title: 'Maldives Luxury Escape',
-    image: '/images/maldives2.jpg',
+    image: '/images/maldives/02.jpg',
     days: 6,
     nights: 5,
     rating: 4.9,
@@ -29,7 +29,7 @@ const tourCards = [
   },
   {
     title: 'Maldives Adventure & Relaxation',
-    image: '/images/maldives3.jpg',
+    image: '/images/maldives/03.jpg',
     days: 5,
     nights: 4,
     rating: 4.8,
@@ -53,7 +53,7 @@ const Maldives: React.FC = () => {
           borderRadius: '16px',
           overflow: 'hidden',
           marginBottom: '2rem',
-          backgroundImage: 'url(/images/maldives-hero.jpg)',
+          backgroundImage: 'url(/images/maldives/04.jpg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           color: '#fff',
