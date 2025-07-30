@@ -35,6 +35,8 @@ import Goa from '../pages/destinations/goa';
 import VietnamPage from '../pages/destinations/vietnam';
 import JammuPage from '../pages/destinations/jammu';
 import SriLanka from '../pages/destinations/SriLanka';
+import Bhutan from '../pages/destinations/Bhutan';
+import Europe from '../pages/destinations/Europe';
 
 import WeAreHiring from '../pages/WeAreHiring';
 import Reviews from '../pages/Reviews';
@@ -86,6 +88,8 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/destination/goa" element={<Goa />} />
       <Route path="/destination/vietnam" element={<VietnamPage />} />
       <Route path="/destination/jammu-and-kashmir" element={<JammuPage />} />
+      <Route path="/destination/bhutan" element={<Bhutan />} />
+      <Route path="/destination/europe" element={<Europe />} />
       <Route path="/destination/srilanka" element={<SriLanka />} />
       <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
