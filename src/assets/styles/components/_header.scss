@@ -82,12 +82,14 @@
 
 @media (max-width: 768px) {
   .header-container {
-    .top-bar {
+  .top-bar {
       flex-direction: row;
-      flex-wrap: wrap;
+      /* Removed flex-wrap to keep items in one row */
+      /* flex-wrap: wrap; */
       align-items: center;
       padding: 12px 16px;
-      justify-content: center;
+      /* Changed justify-content to space-between to spread items */
+      justify-content: space-between;
 
       .logo {
         height: 55px;
@@ -96,8 +98,8 @@
       }
 
       .search-input {
-        max-width: 80%;
-        margin: 0 auto;
+        max-width: 60%;
+        margin: 0;
         width: auto;
         flex-grow: 0;
         padding: 6px 12px;
@@ -120,7 +122,8 @@
         font-size: 12px;
         background-color: #f12711;
         transition: background-color 0.3s ease;
-        margin-top: 8px;
+        /* Removed margin-top to keep button in line */
+        margin-top: 0;
         margin-left: 0;
       }
 
