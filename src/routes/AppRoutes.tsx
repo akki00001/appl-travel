@@ -44,6 +44,7 @@ import TermsAndConditions from '../pages/TermsAndConditions';
 import PrivacyPolicies from '../pages/PrivacyPolicies';
 import CopyrightPolicies from '../pages/CopyrightPolicies';
 import Support from '../pages/Support';
+import BewareOfFrauds from '../pages/BewareOfFrauds';
 
 interface AppRoutesProps {
   searchTerm: string;
@@ -62,6 +63,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/privacy-policies" element={<PrivacyPolicies />} />
       <Route path="/copyright-policies" element={<CopyrightPolicies />} />
       <Route path="/support" element={<Support />} />
+      <Route path="/beware-of-frauds" element={<BewareOfFrauds />} />
       <Route path="/destination/bali" element={<BaliItineraryPage />} />
       <Route path="/destination/bali/itinerary" element={<BaliItineraryPage />} />
       <Route path="/destination/bali/memorable-bali" element={<MemorableBaliItineraryPage />} />

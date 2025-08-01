@@ -37,7 +37,7 @@ const Footer = () => {
               <li><Link to="/privacy-policies">Privacy Policies</Link></li>
               <li><Link to="/copyright-policies">Copyright Policies</Link></li>
               <li><Link to="/support">Support</Link></li>
-              <li className={styles.beware}>Beware of Frauds ⚠️</li>
+<li className={styles.beware}><Link to="/beware-of-frauds">Beware of Frauds ⚠️</Link></li>
             </ul>
           </div>
 

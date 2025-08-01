@@ -42,6 +42,7 @@
       align-items: center;
       gap: 8px;
       text-align: center;
+      position: relative;
 
       img {
         height: 50px;
@@ -51,6 +52,21 @@
       p {
         font-weight: 500;
       }
+    }
+
+    .trending-badge {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      background-color: #f5af19;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 12px;
+      font-size: 10px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      white-space: nowrap;
+      user-select: none;
     }
 
     .custom-nav {
@@ -82,7 +98,7 @@
 
 @media (max-width: 768px) {
   .header-container {
-  .top-bar {
+    .top-bar {
       flex-direction: row;
       /* Removed flex-wrap to keep items in one row */
       /* flex-wrap: wrap; */

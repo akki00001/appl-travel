@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/navigation";
 import "../../assets/styles/components/_header.scss";
@@ -20,6 +20,7 @@ const categories = [
   { name: "Thailand", icon: "/icons/thailand.svg" },
   { name: "Sri Lanka", icon: "/icons/srilanka.svg" },
   { name: "Dubai", icon: "/icons/dubai.svg" },
+  // Add trending property if needed, e.g. { name: "Goa", icon: "/icons/goa.svg", trending: true }
 ];
 
 const categoryPaths: Record<string, string> = {
@@ -178,7 +179,7 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
             <SwiperSlide key={i}>
               <div
                 className="icon-card"
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: 'pointer', position: 'relative' }}
                 onClick={() => {
                   const path = categoryPaths[item.name];
                   if (path) {
@@ -186,6 +187,7 @@ const Header: React.FC<HeaderProps> = ({ searchTerm, setSearchTerm }) => {
                   }
                 }}
               >
+                {/* Add conditional rendering only if trending property exists */}
                 <img src={item.icon} alt={item.name} />
                 <p>{item.name}</p>
               </div>

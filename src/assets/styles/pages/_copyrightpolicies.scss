@@ -1,0 +1,40 @@
+.copyright-container {
+  padding-bottom: 3rem;
+}
+
+.copyright-card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.copyright-card section {
+  margin-bottom: 1.5rem;
+}
+
+.copyright-card h2 {
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+}
+
+.copyright-card p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.copyright-card ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.copyright-card ul li {
+  margin-bottom: 0.75rem;
+}
