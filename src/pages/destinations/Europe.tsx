@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import PopupForm from '../../components/common/PopupForm';
 
 const tourCards = [
   {
@@ -43,6 +44,19 @@ const tourCards = [
 ];
 
 const Europe: React.FC = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<string | undefined>(undefined);
+
+  const openPopup = (title: string) => {
+    setSelectedPackage(title);
+    setPopupOpen(true);
+  };
+
+  const closePopup = () => {
+    setPopupOpen(false);
+    setSelectedPackage(undefined);
+  };
+
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#e8f0fe' }}>
       {/* Hero Section */}

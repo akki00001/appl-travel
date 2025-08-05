@@ -1,4 +1,5 @@
- import React, { useState } from 'react';
+import React, { useState } from 'react';
+import PopupForm from '../../components/common/PopupForm';
 
 interface TourCard {
   images: string[];

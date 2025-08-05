@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaPlay } from 'react-icons/fa';
-import BookingForm from '../booking/BookingForm';
+// import BookingForm from '../booking/BookingForm';
 
 const HeroSection: React.FC = () => {
   return (
@@ -48,7 +48,7 @@ const HeroSection: React.FC = () => {
             backgroundColor: 'rgba(255, 255, 255, 0.3)',
           }}
         >
-          <BookingForm />
+          {/* <BookingForm /> */}
         </div>
       </div>
     </section>
