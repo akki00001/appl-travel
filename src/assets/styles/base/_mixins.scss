@@ -1,1 +1,74 @@
-// Mixins will be defined here.
+// Responsive Mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: 475px) { @content; }
+  }
+  @if $breakpoint == sm {
+    @media (max-width: 640px) { @content; }
+  }
+  @if $breakpoint == md {
+    @media (max-width: 768px) { @content; }
+  }
+  @if $breakpoint == lg {
+    @media (max-width: 1024px) { @content; }
+  }
+  @if $breakpoint == xl {
+    @media (max-width: 1280px) { @content; }
+  }
+  @if $breakpoint == xxl {
+    @media (max-width: 1536px) { @content; }
+  }
+}
+
+// Mobile-first responsive typography
+@mixin responsive-text($min-size, $max-size, $min-width: 320px, $max-width: 1200px) {
+  font-size: $min-size;
+  
+  @media (min-width: $min-width) {
+    font-size: calc(#{$min-size} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}) / (#{$max-width} - #{$min-width})));
+  }
+  
+  @media (min-width: $max-width) {
+    font-size: $max-size;
+  }
+}
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Grid utilities
+@mixin grid-responsive($columns: 1, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+  
+  @include respond(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Container utilities
+@mixin container-responsive {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  
+  @include respond(md) {
+    padding: 0 0.75rem;
+  }
+  
+  @include respond(sm) {
+    padding: 0 0.5rem;
+  }
+}
