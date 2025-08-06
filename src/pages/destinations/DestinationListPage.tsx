@@ -222,6 +222,7 @@ const DestinationListPage: React.FC = () => {
                 loading="lazy"
               />
               <div className="save-badge">{item.discount}</div>
+              <div className="festive-tag">Festive Min. 40% Off</div>
               <div className="dot-nav">
                 {item.images.map((_, dotIndex) => {
                   return (

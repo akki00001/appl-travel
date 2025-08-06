@@ -1,5 +1,5 @@
 .header-container {
-  background-color: #fff;
+  background: linear-gradient(90deg, #FF9933 0%, #FFFFFF 40%, #FFFFFF 60%, #138808 100%);
 
   .top-bar {
     display: flex;
@@ -9,7 +9,7 @@
     background-color: #2a2323;
 
     .logo {
-      height: 90px;
+      height: 65px;
     }
 
     .search-input {
@@ -33,7 +33,7 @@
   }
 
   .slider-wrapper {
-    padding: 7px 50px;
+    padding: 4px 39px;
     position: relative;
 
     .icon-card {
@@ -45,7 +45,7 @@
       position: relative;
 
       img {
-        height: 50px;
+        height: 40px;
         object-fit: contain;
       }
 
@@ -74,7 +74,7 @@
       top: 50%;
       transform: translateY(-50%);
       z-index: 10;
-      background: #f1f1f1;
+      background: #f1f1f168;
       width: 50px;
       height: 50px;
       border-radius: 50%;

@@ -19,7 +19,7 @@ const HeroSection: React.FC = () => {
         <p className="lead fw-light mb-5 mx-auto" style={{ maxWidth: '600px' }}>
           Travel to the any corner of the world, without going around in circles
         </p>
-<a
+{/* <a
   href="https://youtu.be/N66NyPPzvts"
   aria-label="Watch Astir Passage promotional video"
   className="btn btn-light rounded-circle shadow-lg d-inline-flex align-items-center justify-content-center mx-auto"
@@ -36,7 +36,7 @@ const HeroSection: React.FC = () => {
     }}
   ></span>
   <FaPlay className="position-relative" style={{ fontSize: '1.5rem', zIndex: 1 }} />
-</a>
+</a> */}
       </div>
 
       {/* Booking Form Positioned */}
