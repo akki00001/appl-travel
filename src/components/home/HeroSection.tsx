@@ -9,7 +9,7 @@ const HeroSection: React.FC = () => {
       <div className="hero-overlay"></div>
 
       {/* Content */}
-      <div className="container text-white text-center position-relative" style={{ zIndex: 10, padding: '0 1rem', paddingBottom: '12rem' }}>
+      <div className="container text-white text-center position-relative" style={{ zIndex: 10, padding: '80px 1rem', paddingBottom: '12rem' }}>
         <span className="d-block text-warning fst-italic mb-3" style={{ fontFamily: "'Brush Script MT', cursive", fontWeight: 500 }}>
           Welcome to Astir Passage
         </span>
