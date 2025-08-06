@@ -236,6 +236,7 @@ const Europe: React.FC = () => {
                   width: '100%',
                   justifyContent: 'center',
                 }}
+                onClick={() => openPopup(card.title)}
               >
                 Request Callback
               </button>

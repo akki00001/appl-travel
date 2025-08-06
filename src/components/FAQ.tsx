@@ -3,12 +3,12 @@ import '../assets/styles/pages/_faq.scss';
 
 const faqs = [
   "What types of travel packages does Astir Passage offer?",
-  "Can I customize my travel itinerary with Astir Passage",
-  "Is flight booking included in your travel packages? ",
-  "How do I book a tour with Astir Passage? ",
-  "Do you provide visa assistance for international tours? ",
-  "Are your travel packages suitable for family trips? ",
-  "What happens if my trip gets canceled or rescheduled? "
+  "Can I customize my travel itinerary with Astir Passage?",
+  "Is flight booking included in your travel packages?",
+  "How do I book a tour with Astir Passage?",
+  "Do you provide visa assistance for international tours?",
+  "Are your travel packages suitable for family trips?",
+  "What happens if my trip gets canceled or rescheduled?"
 ];
 
 const answers = [
@@ -33,9 +33,12 @@ const FAQ: React.FC = () => {
       <h3>Frequently Asked Questions</h3>
       <ul>
         {faqs.map((question, idx) => (
-          <li key={idx} onClick={() => toggle(idx)} className={activeIndex === idx ? 'active' : ''}>
-            <span>Q. {question}</span>
-            <div className="answer">
+          <li key={idx} onClick={() => toggle(idx)} className={activeIndex === idx ? 'active' : ''} tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter') toggle(idx); }}>
+            <div className="question">
+              <span>Q. {question}</span>
+              <span className="icon">{activeIndex === idx ? '-' : '+'}</span>
+            </div>
+            <div className="answer" style={{ maxHeight: activeIndex === idx ? '500px' : '0' }}>
               <p>{answers[idx]}</p>
             </div>
           </li>

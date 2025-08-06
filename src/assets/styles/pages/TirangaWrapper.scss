@@ -1,0 +1,44 @@
+$t-saffron: #FF9933;
+$t-white: #FFFFFF;
+$t-green: #138808;
+
+.tiranga-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  .saffron {
+    background-color: $t-saffron;
+    flex: 1;
+  }
+
+  .white {
+    background-color: $t-white;
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .chakra-wrapper {
+      position: absolute;
+      top: 20px;
+
+      .chakra {
+        width: 80px;
+      }
+    }
+
+    .content {
+      z-index: 1;
+      text-align: center;
+      color: #000;
+    }
+  }
+
+  .green {
+    background-color: $t-green;
+    flex: 1;
+  }
+}

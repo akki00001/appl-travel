@@ -69,6 +69,7 @@ const Home: React.FC<HomeProps> = ({ searchTerm }) => {
         countriesCount={65}
         ratingsCount={{ '5': 29, '4': 19, '3': 2, '2': 0, '1': 0 }}
       />
+      <hr />
       <FAQ />
     </>
   );

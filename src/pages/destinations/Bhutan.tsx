@@ -44,6 +44,15 @@ const tourCards = [
 ];
 
 const Bhutan: React.FC = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleOpenPopup = (title: string) => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#e0f7fa' }}>
       {/* Hero Section */}
@@ -223,6 +232,7 @@ const Bhutan: React.FC = () => {
                   width: '100%',
                   justifyContent: 'center',
                 }}
+                onClick={() => handleOpenPopup(card.title)}
               >
                 Request Callback
               </button>
@@ -230,6 +240,9 @@ const Bhutan: React.FC = () => {
           </div>
         ))}
       </div>
+      {showPopup && (
+        <PopupForm destinationName="Bhutan" onClose={handleClosePopup} />
+      )}
     </div>
   );
 };

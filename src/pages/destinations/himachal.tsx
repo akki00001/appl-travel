@@ -54,6 +54,15 @@ const tourCards: TourCard[] = [
 ];
 
 const HimachalPage: React.FC = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleOpenPopup = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif', background: '#f8f9fa' }}>
       {/* Hero Section */}
@@ -132,14 +141,15 @@ const HimachalPage: React.FC = () => {
         }}
       >
         {tourCards.map((card, idx) => (
-          <TourCardComponent key={idx} card={card} />
+          <TourCardComponent key={idx} card={card} onOpenPopup={handleOpenPopup} />
         ))}
       </div>
+      {showPopup && <PopupForm destinationName="Himachal Pradesh" onClose={handleClosePopup} />}
     </div>
   );
 };
 
-const TourCardComponent: React.FC<{ card: TourCard }> = ({ card }) => {
+const TourCardComponent: React.FC<{ card: TourCard; onOpenPopup: () => void }> = ({ card, onOpenPopup }) => {
   return (
     <div
       style={{
@@ -194,6 +204,7 @@ const TourCardComponent: React.FC<{ card: TourCard }> = ({ card }) => {
           width: '100%',
           textAlign: 'center',
         }}
+        onClick={onOpenPopup}
       >
         Request Callback
       </button>
