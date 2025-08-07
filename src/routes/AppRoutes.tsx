@@ -94,6 +94,7 @@ const AppRoutes: React.FC<AppRoutesProps> = ({ searchTerm }) => {
       <Route path="/destination/europe" element={<Europe />} />
       <Route path="/destination/srilanka" element={<SriLanka />} />
       <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="*" element={<Home searchTerm={searchTerm} />} />
     </Routes>
   );
 };

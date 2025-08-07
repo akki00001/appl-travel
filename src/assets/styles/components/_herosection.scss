@@ -10,6 +10,7 @@
   color: white;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 @media (max-width: 767.98px) {
@@ -46,6 +47,21 @@
 
 .hero-content p {
   font-size: 1.2rem;
+}
+
+@media (max-width: 767.98px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content {
+    max-width: 90%;
+    padding: 0 1rem;
+  }
 }
 
 .hero-video-button {

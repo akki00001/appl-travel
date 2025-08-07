@@ -3,18 +3,20 @@ $t-white: #FFFFFF;
 $t-green: #138808;
 
 .tiranga-container {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 
   .saffron {
-    background-color: $t-saffron;
-    flex: 1;
+    background-color: transparent;
+    flex: none;
+    height: 0;
   }
 
   .white {
     background-color: $t-white;
-    flex: 1;
+    flex: none;
+    height: auto;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -32,13 +34,15 @@ $t-green: #138808;
 
     .content {
       z-index: 1;
-      // text-align: center;
       color: #000;
+      width: 100%;
+      padding: 0;
     }
   }
 
   .green {
-    background-color: $t-green;
-    flex: 1;
+    background-color: transparent;
+    flex: none;
+    height: 33vh;
   }
 }
