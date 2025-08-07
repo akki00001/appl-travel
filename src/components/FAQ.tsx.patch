@@ -1,6 +1,0 @@
-<p>We offer a wide range of travel packages including domestic tours, international getaways, honeymoon packages, group tours, customized holidays, adventure trips, and weekend getaways.</p>
-            </div>
-=======
-            <div className="answer">
-              <p>{answers[idx]}</p>
-            </div>
