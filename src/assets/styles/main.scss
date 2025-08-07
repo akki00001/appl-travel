@@ -1,0 +1,127 @@
+body {
+  overflow-x: hidden;
+}
+@import 'base/variables';
+@import 'base/mixins';
+
+@import 'components/destinationslider';
+@import 'components/footer.module';
+@import 'components/header';
+@import 'components/herohighlightsection';
+@import 'components/herosection';
+@import 'components/recentposts';
+@import 'components/testimonialsection';
+@import 'components/balitourcards';
+@import 'components/besttimetovisit';
+@import 'components/aboutsection';
+@import 'components/itinerary';
+@import 'components/responsive';
+
+@import 'pages/destinationlistpage';
+@import 'pages/about';
+@import 'pages/blog';
+@import 'pages/australiapage';
+@import 'pages/faq';
+
+@import '../../styles/responsive-fixes';
+
+.hide-on-mobile {
+  display: block;
+}
+
+@media (max-width: 767.98px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+.itinerary-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.itinerary-day-plan {
+  width: 180px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  height: fit-content;
+}
+
+.itinerary-main-content {
+  flex: 2;
+}
+
+.itinerary-aside {
+  flex: 1;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  height: fit-content;
+}
+
+.itinerary-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  color: gray;
+  margin-top: 0.5rem;
+}
+
+.itinerary-info > span {
+  flex: 1 1 auto;
+  min-width: 100px;
+}
+
+.itinerary-duration {
+  background: #ffc107;
+  color: #333;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+}
+
+.itinerary-location {
+  background: #e0e0e0;
+  color: #333;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .itinerary-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .itinerary-info > span {
+    flex: none;
+    width: auto;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .itinerary-container {
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .itinerary-day-plan,
+  .itinerary-main-content,
+  .itinerary-aside {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  body, html {
+    padding-right: 0 !important;
+    margin-right: 0 !important;
+    overflow-x: hidden;
+  }
+}

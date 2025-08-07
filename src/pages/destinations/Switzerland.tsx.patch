@@ -1,0 +1,94 @@
+ onClick={prevImage}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '10px',
+                transform: 'translateY(-50%)',
+                background: 'rgba(0,0,0,0.3)',
+                border: 'none',
+                borderRadius: '50%',
+                color: 'white',
+                width: '30px',
+                height: '30px',
+                cursor: 'pointer',
+              }}
+              aria-label="Previous Image"
+            >
+              ‹
+            </button>
+            <button
+              onClick={nextImage}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                right: '10px',
+                transform: 'translateY(-50%)',
+                background: 'rgba(0,0,0,0.3)',
+                border: 'none',
+                borderRadius: '50%',
+                color: 'white',
+                width: '30px',
+                height: '30px',
+                cursor: 'pointer',
+              }}
+              aria-label="Next Image"
+            >
+              ›
+            </button>
+=======
+            <button
+              onClick={prevImage}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                left: '10px',
+                transform: 'translateY(-50%)',
+                background: 'rgba(0,0,0,0.5)',
+                border: 'none',
+                borderRadius: '50%',
+                color: 'white',
+                width: '36px',
+                height: '36px',
+                cursor: 'pointer',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                transition: 'background 0.3s ease',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.5rem',
+                userSelect: 'none',
+              }}
+              aria-label="Previous Image"
+              onMouseOver={e => (e.currentTarget.style.background = 'rgba(0,0,0,0.7)')}
+              onMouseOut={e => (e.currentTarget.style.background = 'rgba(0,0,0,0.5)')}
+            >
+              ‹
+            </button>
+            <button
+              onClick={nextImage}
+              style={{
+                position: 'absolute',
+                top: '50%',
+                right: '10px',
+                transform: 'translateY(-50%)',
+                background: 'rgba(0,0,0,0.5)',
+                border: 'none',
+                borderRadius: '50%',
+                color: 'white',
+                width: '36px',
+                height: '36px',
+                cursor: 'pointer',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+                transition: 'background 0.3s ease',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.5rem',
+                userSelect: 'none',
+              }}
+              aria-label="Next Image"
+              onMouseOver={e => (e.currentTarget.style.background = 'rgba(0,0,0,0.7)')}
+              onMouseOut={e => (e.currentTarget.style.background = 'rgba(0,0,0,0.5)')}
+            >
+              ›
+            </button>

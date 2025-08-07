@@ -1,0 +1,13 @@
+.hero-wrap {
+    height: 50%;
+  }
+}
+=======
+@media (max-width: 767.98px) {
+  .hero-wrap {
+    height: 50vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
